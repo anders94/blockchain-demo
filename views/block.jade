@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  .container
+    h1 Block
+    .well#block1chain1well
+      form.form-horizontal
+
+        .form-group
+          label.col-sm-2.control-label(for='block1chain1number') Block:
+          .col-sm-10
+            .input-group
+              span.input-group-addon #
+              input#block1chain1number.form-control(type='text', value='1' onkeyup='updateHash(1, 1);')
+
+        .form-group
+          label.col-sm-2.control-label(for='block1chain1nonce') Nonce:
+          .col-sm-10
+             input#block1chain1nonce.form-control(type='text', value='72608', onkeyup='updateHash(1, 1);')
+
+        .form-group
+          label.col-sm-2.control-label(for='block1chain1data') Data:
+          .col-sm-10
+            textarea#block1chain1data.form-control(rows='10', onkeyup='updateHash(1, 1);')
+
+        #state.form-group
+          label.col-sm-2.control-label(for='block1chain1hash') Hash:
+          .col-sm-10
+            input#block1chain1hash.form-control(type='text', disabled)
+
+        .form-group
+          .col-sm-2
+            i.icon-spinner.icon-spin.icon-large
+          .col-sm-10
+            button#block1chain1mineButton.btn.btn-primary.ladda-button(data-style='expand-right')
+              span.ladda-label Mine
+
+  script.
+    $(function() {
+      mineButtonAnimation(1, 1);
+      updateHash(1, 1);
+    });
+
+    function getText(block, chain) {
+      return $('#block'+block+'chain'+chain+'number').val() +
+             $('#block'+block+'chain'+chain+'nonce').val() +
+             $('#block'+block+'chain'+chain+'data').val();
+    }
+
+    function mineButtonAnimation(block, chain) {
+      $('#block'+block+'chain'+chain+'mineButton').click(function() {
+          var l = Ladda.create(this);
+          l.start();
+          setTimeout(function() {
+              mine(block, chain, false);
+              l.stop();
+            }, 250); // give UI time to update
+        });
+    }

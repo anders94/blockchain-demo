@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+
+    h1 SHA256 Hash
+    .well#well1
+      form.form-horizontal
+
+        .form-group
+          label.col-sm-2.control-label(for='data') Data:
+          .col-sm-10
+            textarea#data.form-control(rows='10', onkeyup='$("#hash").val(sha256())')
+
+        .form-group
+          label.col-sm-2.control-label(for='hash') Hash:
+          .col-sm-10
+            input#hash.form-control(type='text', disabled)
+
+  script.
+    function getText(block, chain) {
+      return $('#data').val();
+    }
+
+    $("#hash").val(sha256());

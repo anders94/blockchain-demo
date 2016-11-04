@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  .container-fluid
+    h1 Coinbase Transactions
+    h3 Peer A
+    .row.row-horizon
+      - var blocks = []
+      - blocks.push({block: 1, chain: 1, nonce: 16651, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+      - blocks.push({block: 2, chain: 1, nonce: 37284, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Anders', to: 'Sophia'},{value: '20.00', from: 'Anders', to: 'Lucas'},{value: '15.00', from: 'Anders', to: 'Emily'},{value: '15.00', from: 'Anders', to: 'Madison'}], previous: '0000438d7625b86a6f366545b1929975a0d3ff1f8847e56cc587cadddb0ab781'})
+      - blocks.push({block: 3, chain: 1, nonce: 74806, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '3.14', from: 'Sylvester', to: 'Bugs'},{value: '2.12', from: 'Tweety', to: 'Roadrunner'},{value: '1.99', from: 'Daffy', to: 'Marvin'}], previous: '0000a5a24dd8f977c06df9f4c6e333cc0d37f68e4275292e9aa1fd330f1afd48'})
+      - blocks.push({block: 4, chain: 1, nonce: 19358, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Emily', to: 'Jackson'},{value: '5.00', from: 'Madison', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '000057a728d2dc10eff73f129e319ac636619ab32fd95560f66494b8cbb9701d'})
+      - blocks.push({block: 5, chain: 1, nonce: 168037, coinbasevalue: '100.00', coinbaseto: 'Sophia', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000ff15c919e4dc59836f8d196ed6d6e9b6723f7f1d9b15857707cf382e9a5d'})
+      each block in blocks
+        .col-xs-7
+          include includes/coinbaseblock.jade
+
+    hr
+    h3 Peer B
+    .row.row-horizon
+      - var blocks = []
+      - blocks.push({block: 1, chain: 2, nonce: 16651, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+      - blocks.push({block: 2, chain: 2, nonce: 37284, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Anders', to: 'Sophia'},{value: '20.00', from: 'Anders', to: 'Lucas'},{value: '15.00', from: 'Anders', to: 'Emily'},{value: '15.00', from: 'Anders', to: 'Madison'}], previous: '0000438d7625b86a6f366545b1929975a0d3ff1f8847e56cc587cadddb0ab781'})
+      - blocks.push({block: 3, chain: 2, nonce: 74806, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '3.14', from: 'Sylvester', to: 'Bugs'},{value: '2.12', from: 'Tweety', to: 'Roadrunner'},{value: '1.99', from: 'Daffy', to: 'Marvin'}], previous: '0000a5a24dd8f977c06df9f4c6e333cc0d37f68e4275292e9aa1fd330f1afd48'})
+      - blocks.push({block: 4, chain: 2, nonce: 19358, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Emily', to: 'Jackson'},{value: '5.00', from: 'Madison', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '000057a728d2dc10eff73f129e319ac636619ab32fd95560f66494b8cbb9701d'})
+      - blocks.push({block: 5, chain: 2, nonce: 168037, coinbasevalue: '100.00', coinbaseto: 'Sophia', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000ff15c919e4dc59836f8d196ed6d6e9b6723f7f1d9b15857707cf382e9a5d'})
+      each block in blocks
+        .col-xs-7
+          include includes/coinbaseblock.jade
+
+    hr
+    h3 Peer C
+    .row.row-horizon
+      - var blocks = []
+      - blocks.push({block: 1, chain: 3, nonce: 16651, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+      - blocks.push({block: 2, chain: 3, nonce: 37284, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Anders', to: 'Sophia'},{value: '20.00', from: 'Anders', to: 'Lucas'},{value: '15.00', from: 'Anders', to: 'Emily'},{value: '15.00', from: 'Anders', to: 'Madison'}], previous: '0000438d7625b86a6f366545b1929975a0d3ff1f8847e56cc587cadddb0ab781'})
+      - blocks.push({block: 3, chain: 3, nonce: 74806, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '3.14', from: 'Sylvester', to: 'Bugs'},{value: '2.12', from: 'Tweety', to: 'Roadrunner'},{value: '1.99', from: 'Daffy', to: 'Marvin'}], previous: '0000a5a24dd8f977c06df9f4c6e333cc0d37f68e4275292e9aa1fd330f1afd48'})
+      - blocks.push({block: 4, chain: 3, nonce: 19358, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Emily', to: 'Jackson'},{value: '5.00', from: 'Madison', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '000057a728d2dc10eff73f129e319ac636619ab32fd95560f66494b8cbb9701d'})
+      - blocks.push({block: 5, chain: 3, nonce: 168037, coinbasevalue: '100.00', coinbaseto: 'Sophia', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000ff15c919e4dc59836f8d196ed6d6e9b6723f7f1d9b15857707cf382e9a5d'})
+      each block in blocks
+        .col-xs-7
+          include includes/coinbaseblock.jade
+
+  script.
+    $(function() {
+      setup(1, 1);
+      setup(2, 1);
+      setup(3, 1);
+      setup(4, 1);
+      setup(5, 1);
+
+      setup(1, 2);
+      setup(2, 2);
+      setup(3, 2);
+      setup(4, 2);
+      setup(5, 2);
+
+      setup(1, 3);
+      setup(2, 3);
+      setup(3, 3);
+      setup(4, 3);
+      setup(5, 3);
+    });
+
+    function getText(block, chain) {
+      var s = $('#block'+block+'chain'+chain+'number').val() +
+              $('#block'+block+'chain'+chain+'nonce').val() +
+              $('#block'+block+'chain'+chain+'coinbasevalue').val() +
+              $('#block'+block+'chain'+chain+'coinbaseto').val();
+
+      for (var x=1; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+        s = s + $('#block'+block+'chain'+chain+'tx'+x+'value').val() +
+                $('#block'+block+'chain'+chain+'tx'+x+'from').val() +
+                $('#block'+block+'chain'+chain+'tx'+x+'to').val();
+      }
+      s = s + $('#block'+block+'chain'+chain+'previous').val();
+      return s;
+    }
+
+    function setup(block, chain) {
+      updateHash(block, chain);
+      $('#block'+block+'chain'+chain+'mineButton').click(function() {
+          var l = Ladda.create(this);
+          l.start();
+          setTimeout(function() {
+              mine(block, chain, true);
+              l.stop();
+            }, 250); // give UI time to update
+        });
+    }

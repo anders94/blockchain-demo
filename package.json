@@ -1,0 +1,32 @@
+{
+  "name": "blockchain-demo",
+  "description": "A web-based demonstration of blockchain concepts.",
+  "author": {
+    "name": "Anders Brownworth"
+  },
+  "version": "0.0.1",
+  "keywords": [
+    "blockchain",
+    "demo",
+    "bitcoin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anders94/blockchain-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anders94/blockchain-demo/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "async": "^1.4.2",
+    "express": "^4.13.4"
+  },
+  "homepage": "https://github.com/anders94/blockchain-demo#readme",
+  "maintainers": [
+    {
+      "name": "anders",
+      "email": "anders-git@evantide.com"
+    }
+  ]
+}

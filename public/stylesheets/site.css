@@ -1,0 +1,34 @@
+html {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+body > .container-fluid {
+  padding: 60px 15px 0;
+}
+
+.container-fluid .text-muted {
+  margin: 20px 0;
+}
+
+.well-success {
+  background: rgb(223, 240, 216);
+}
+
+.well-error {
+  background: rgb(250, 220, 220);
+}
