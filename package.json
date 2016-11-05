@@ -18,9 +18,15 @@
     "url": "https://github.com/anders94/blockchain-demo/issues"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "async": "^1.4.2",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "serve-favicon": "^2.3.0",
+    "morgan": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "body-parser": "~1.15.2",
+    "debug": "~2.2.0",
+    "jade": "~1.11.0"
   },
   "homepage": "https://github.com/anders94/blockchain-demo#readme",
   "maintainers": [
