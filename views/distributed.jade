@@ -3,43 +3,19 @@ extends layout
 block content
   .container-fluid
     h1 Distributed Blockchain
-    h3 Peer A
-    .row.row-horizon
-      - var blocks = []
-      - blocks.push({block: 1, chain: 1, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-      - blocks.push({block: 2, chain: 1, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
-      - blocks.push({block: 3, chain: 1, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
-      - blocks.push({block: 4, chain: 1, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
-      - blocks.push({block: 5, chain: 1, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
-      each block in blocks
-        .col-xs-7
-          include includes/block.jade
-
-    hr
-    h3 Peer B
-    .row.row-horizon
-      - blocks = []
-      - blocks.push({block: 1, chain: 2, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-      - blocks.push({block: 2, chain: 2, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
-      - blocks.push({block: 3, chain: 2, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
-      - blocks.push({block: 4, chain: 2, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
-      - blocks.push({block: 5, chain: 2, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
-      each block in blocks
-        .col-xs-7
-          include includes/block.jade
-
-    hr
-    h3 Peer C
-    .row.row-horizon
-      - blocks = []
-      - blocks.push({block: 1, chain: 3, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-      - blocks.push({block: 2, chain: 3, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
-      - blocks.push({block: 3, chain: 3, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
-      - blocks.push({block: 4, chain: 3, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
-      - blocks.push({block: 5, chain: 3, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
-      each block in blocks
-        .col-xs-7
-          include includes/block.jade
+    - var peers = {1: 'A', 2: 'B', 3: 'C'}
+    - each peer, chain in peers
+      h3 Peer #{peer}
+      .row.row-horizon
+        - var blocks = []
+        - blocks.push({block: 1, chain: chain, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+        - blocks.push({block: 2, chain: chain, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
+        - blocks.push({block: 3, chain: chain, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
+        - blocks.push({block: 4, chain: chain, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
+        - blocks.push({block: 5, chain: chain, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
+        each block in blocks
+          .col-xs-7
+            include includes/block.jade
 
   script.
     $(function() {
