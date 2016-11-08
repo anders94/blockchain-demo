@@ -32,3 +32,6 @@ Point a web browser at the demo:
 ```
 http://localhost:3000
 ```
+
+## Send Thanks
+Bitcoin greatfully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
