@@ -9,10 +9,10 @@ block content
       .row.row-horizon
         - var blocks = []
         - blocks.push({block: 1, chain: chain, nonce: 16651, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-        - blocks.push({block: 2, chain: chain, nonce: 37284, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Anders', to: 'Sophia'},{value: '20.00', from: 'Anders', to: 'Lucas'},{value: '15.00', from: 'Anders', to: 'Emily'},{value: '15.00', from: 'Anders', to: 'Madison'}], previous: '0000438d7625b86a6f366545b1929975a0d3ff1f8847e56cc587cadddb0ab781'})
-        - blocks.push({block: 3, chain: chain, nonce: 933, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Emily', to: 'Jackson'},{value: '5.00', from: 'Madison', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '0000a5a24dd8f977c06df9f4c6e333cc0d37f68e4275292e9aa1fd330f1afd48'})
-        - blocks.push({block: 4, chain: chain, nonce: 35558, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '15.00', from: 'Jackson', to: 'Ryan'},{value: '5.00', from: 'Emily', to: 'Madison'},{value: '8.00', from: 'Sophia', to: 'Jackson'}], previous: '0000053903659cdf61b0728bf9ced52c4b54661b4ef3fb37161493d002721894'})
-        - blocks.push({block: 5, chain: chain, nonce: 11396, coinbasevalue: '100.00', coinbaseto: 'Sophia', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000e5196a011b80e7c79deb5f15b7c936f8a5cd64c873700eca47b88caaf6e8'})
+        - blocks.push({block: 2, chain: chain, nonce: 215458, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Anders', to: 'Sophia'},{value: '20.00', from: 'Anders', to: 'Lucas'},{value: '15.00', from: 'Anders', to: 'Emily'},{value: '15.00', from: 'Anders', to: 'Madison'}], previous: '0000438d7625b86a6f366545b1929975a0d3ff1f8847e56cc587cadddb0ab781'})
+        - blocks.push({block: 3, chain: chain, nonce: 146, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '10.00', from: 'Emily', to: 'Jackson'},{value: '5.00', from: 'Madison', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '0000baeab68c2a60f9a6fa56355438d97c672a15494fcea617064d9314f9ff63'})
+        - blocks.push({block: 4, chain: chain, nonce: 18292, coinbasevalue: '100.00', coinbaseto: 'Anders', txs: [{value: '15.00', from: 'Jackson', to: 'Ryan'},{value: '5.00', from: 'Emily', to: 'Madison'},{value: '8.00', from: 'Sophia', to: 'Jackson'}], previous: '0000df1d632b734f5a5fc126a0f0e8894fb4c8314ba7086b62980559af6771b9'})
+        - blocks.push({block: 5, chain: chain, nonce: 108899, coinbasevalue: '100.00', coinbaseto: 'Sophia', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000c694336f88129f3685bd3ba5d67c445dfd8d18bd22f5d87301dd560eb30e'})
         each block in blocks
           .col-xs-7
             include includes/coinbaseblock.jade
@@ -44,7 +44,7 @@ block content
               $('#block'+block+'chain'+chain+'coinbasevalue').val() +
               $('#block'+block+'chain'+chain+'coinbaseto').val();
 
-      for (var x=1; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+      for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
         s = s + $('#block'+block+'chain'+chain+'tx'+x+'value').val() +
                 $('#block'+block+'chain'+chain+'tx'+x+'from').val() +
                 $('#block'+block+'chain'+chain+'tx'+x+'to').val();
