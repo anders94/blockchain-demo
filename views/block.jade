@@ -48,7 +48,8 @@ block content
     }
 
     function mineButtonAnimation(block, chain) {
-      $('#block'+block+'chain'+chain+'mineButton').click(function() {
+      $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
+          e.preventDefault();
           var l = Ladda.create(this);
           l.start();
           setTimeout(function() {
