@@ -52,7 +52,7 @@ block content
           var l = Ladda.create(this);
           l.start();
           setTimeout(function() {
-              mine(block, chain);
+              mine(block, chain, true);
               l.stop();
             }, 250); // give UI time to update
         });
