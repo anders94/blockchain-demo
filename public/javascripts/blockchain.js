@@ -30,18 +30,17 @@ function updateChain(block, chain) {
 }
 
 function mine(block, chain, isChain) {
-  var found = false;
-  for (var x = 0; x <= 500000 && !found; x++) {
+  for (var x = 0; x <= 500000; x++) {
     $('#block'+block+'chain'+chain+'nonce').val(x);
     $('#block'+block+'chain'+chain+'hash').val(sha256(block, chain));
     if ($('#block'+block+'chain'+chain+'hash').val().substr(0, 4) === '0000') {
-      found = true;
       if (isChain) {
         updateChain(block, chain);
       }
       else {
         updateState(block, chain);
       }
+      break;
     }
   }
 }
