@@ -21,12 +21,12 @@
     #state.form-group
       label.col-sm-2.control-label(for='block#{block.block}chain#{block.chain}previous') Prev:
       .col-sm-10
-        input.form-control(id='block#{block.block}chain#{block.chain}previous', type='text', value='#{block.previous}')
+        input.form-control(id='block#{block.block}chain#{block.chain}previous', type='text', value='#{block.previous}', disabled)
 
     #state.form-group
       label.col-sm-2.control-label(for='block#{block.block}chain#{block.chain}hash') Hash:
       .col-sm-10
-        input.form-control(id='block#{block.block}chain#{block.chain}hash', type='text' disabled)
+        input.form-control(id='block#{block.block}chain#{block.chain}hash', type='text', disabled)
 
     .form-group
       .col-sm-2
