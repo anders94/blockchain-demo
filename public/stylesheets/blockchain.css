@@ -25,6 +25,10 @@ body > .container-fluid {
   margin: 20px 0;
 }
 
+input {
+  font-family: monospace;
+}
+
 .well-success {
   background: rgb(223, 240, 216);
 }
