@@ -1,4 +1,5 @@
 var express = require('express');
+var i18n = require('i18n');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -18,6 +19,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(i18n.init);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
@@ -53,5 +55,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
+i18n.configure({
+  locales:['en', 'ja'],
+  directory: __dirname + '/locales'
+});
 
 module.exports = app;

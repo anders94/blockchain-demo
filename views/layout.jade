@@ -34,20 +34,20 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='/') Blockchain Demo
+          a.navbar-brand(href='/') #{__('Blockchain Demo')}
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li(class={active: page === 'hash'})
-              a(href='/hash') Hash
+              a(href='/hash') #{__('Hash')}
             li(class={active: page === 'block'})
-              a(href='/block') Block
+              a(href='/block') #{__('Block')}
             li(class={active: page === 'blockchain'})
-              a(href='/blockchain') Blockchain
+              a(href='/blockchain') #{__('Blockchain')}
             li(class={active: page === 'distributed'})
-              a(href='/distributed') Distributed
+              a(href='/distributed') #{__('Distributed')}
             li(class={active: page === 'tokens'})
-              a(href='/tokens') Tokens
+              a(href='/tokens') #{__('Tokens')}
             li(class={active: page === 'coinbase'})
-              a(href='/coinbase') Coinbase
+              a(href='/coinbase') #{__('Coinbase')}
 
     block content
