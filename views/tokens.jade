@@ -2,10 +2,10 @@ extends layout
 
 block content
   .container-fluid
-    h1 Tokens
+    h1 #{__('Tokens')}
     - var peers = {1: 'A', 2: 'B', 3: 'C'}
     - each peer, chain in peers
-      h3 Peer #{peer}
+      h3 #{__('Peer')} #{peer}
       .row.row-horizon
         - var blocks = []
         - blocks.push({block: 1, chain: chain, nonce: 139358, txs: [{value: '25.00', from: 'Darcy', to: 'Bingley'},{value: '4.27', from: 'Elizabeth', to: 'Jane'},{value: '19.22', from: 'Wickham', to: 'Lydia'},{value: '106.44', from: 'Lady Catherine de Bourgh', to: 'Collins'},{value: '6.42', from: 'Charlotte', to: 'Elizabeth'}], previous: '0000000000000000000000000000000000000000000000000000000000000000'})
