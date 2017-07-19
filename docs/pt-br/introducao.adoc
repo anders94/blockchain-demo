@@ -1,0 +1,23 @@
+[[introducao]]
+= Introdução
+
+Este projeto provê uma aplicação web para demonstrar conceitos básicos e fundamentais de uma {blockchain} (ou, traduzindo ao pé da letra para o português, corrente de blocos).
+
+Essa demonstração pode ser visualizada em duas versões:
+
+* Versão original (em inglês) (criada por {uri-andersbrownworth}[Anders Brownworth]). Vídeos:
+** {uri-blockchain-101-demo}[Blockchain 101 - Demo]
+* Versão brasileira (criada por {uri-paulojeronimo}[Paulo Jerônimo] para a organização {uri-blockchain4devs}. Vídeos [red]#(em produção)#:
+** blockchain-demo - instalação
+** blockchain-demo - o que é um Hash?
+** blockchain-demo - o que é um Bloco?
+** blockchain-demo - uma visualização gráfica da Blockchain
+** blockchain-demo - a blockchain é distribuída
+** blockchain-demo - a blockchain utilizada no controle de transações (o Bitcoin)
+
+Através dos vídeos acima é feita uma apresentação, visual, que consideramos ser bastante elucidante nos conceitos elementares de uma {blockchain}.
+É introduzido o conceito de um {uri-livro-razao}[livro-razão] (distribuído) através de uma aplicação web interativa.
+
+Essa aplicação web está disponível (em execução) no seguinte endereço:
+
+* {uri-anders-blockchain}

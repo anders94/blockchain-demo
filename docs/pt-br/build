@@ -1,0 +1,37 @@
+#!/bin/bash
+set +x
+set -e
+
+BASE_DIR=`cd "$(dirname "$0")"; pwd`
+pdf_generate=${pdf_generate:-true}
+use_fopub=${use_fopub:-false}
+fopub=${fopub:-~/Projects/github.com/asciidoctor/asciidoctor-fopub/bin/fopub}
+
+cd "$BASE_DIR"
+
+which asciidoctor > /dev/null || { echo "Install asciidoctor first!"; exit 1; }
+
+clean() {
+  rm -f index.{html,xml}
+  rm -f blockchain-demo.pdf
+}
+
+main() {
+  asciidoctor index.adoc
+  result=$?
+
+  $pdf_generate || exit $result
+
+  if $use_fopub
+  then
+    asciidoctor -b docbook -d book -a data-uri! index.adoc
+    [ -x "$fopub" ] || { echo "WARN: $fopub not executable. PDF will not be generated!"; exit 0; }
+    $fopub index.xml
+  else
+    asciidoctor-pdf -o blockchain-demo.pdf index.adoc
+  fi
+}
+
+op=$1
+[ "$op" ] || op=main
+type $op &> /dev/null && $op || { echo "\"$op\" isn't an option!"; exit 1; }

@@ -1,5 +1,6 @@
 # Blockchain Demo
 A web-based demonstration of blockchain concepts.
+_(If you want to read this in Brazilian Portuguese [click this link](docs/pt-br/index.html))_.
 
 [![Blockchain 101 - Demo](https://img.youtube.com/vi/_160oMzblY8/0.jpg)](https://www.youtube.com/watch?v=_160oMzblY8)
 

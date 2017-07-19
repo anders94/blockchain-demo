@@ -1,0 +1,8 @@
+= Melhorias que você pode aguardar
+
+Próximas melhorias esperadas para a versão em português:
+
+* Criação de closed captions (em inglês) para os vídeos disponibibilizados em pt-br.
+* Internacionalização da aplicação para pt-br.
+* Disponiblização da aplicação em execução, também, em {uri-blockchain4devs}.
+* Apresentação de links, na página principal da aplicação, para a visualização dos vídeos em português.

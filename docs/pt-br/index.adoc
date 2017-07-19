@@ -1,0 +1,39 @@
+= Blockchain: Uma visualização gráfica
+:author: Paulo Jerônimo
+:toc:
+:toc-title: Conteúdo
+:toclevels: 4
+:numbered:
+:icons: font
+
+:srcdir: ../..
+
+ifdef::backend-html5[]
+:rootdir: ../..
+:blockchain: pass:[<b>Blockchain</b>]
+endif::[]
+
+ifdef::backend-pdf[]
+:rootdir: blockchain-demo
+:blockchain: Blockchain
+endif::[]
+
+include::uris.conf[]
+
+:leveloffset: +1
+
+include::introducao.adoc[]
+
+<<<
+include::instalacao/index.adoc[]
+
+<<<
+include::demonstracao/index.adoc[]
+
+<<<
+include::extras/index.adoc[]
+
+<<<
+include::enviando-um-obrigado.adoc[]
+
+:leveloffset: -1

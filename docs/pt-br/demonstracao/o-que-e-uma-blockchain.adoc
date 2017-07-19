@@ -1,0 +1,75 @@
+[[o-que-e-uma-blockchain]]
+= O que é uma Blockchain?
+
+== Uma visualização gráfica
+
+Finalmente, vamos à {uri-blockchain-demo-blockchain}[aba {blockchain}] para entender o que é esse conceito genial, numa visualização gráfica! 😃
+
+Nessa aba, apenas para fins de demonstração, apresentamos cinco (5) blocos encadeados.
+Observe que, agora, foi adicionado o campo `Prev`.
+Esse campo também é um `Hash`.
+No primeiro bloco, seu valor é nulo.
+Para todos os demais blocos, o campo `Prev` armazena o valor do `Hash` do bloco anterior.
+Assim, agora há um encademento que forma o que chamamos de "corrente de blocos".
+Ou, o nome bonito em inglês: {blockchain}.
+
+O objetivo desse encadeamento entre os blocos é muito simples.
+Se você fizer uma alteração em qualquer campo do bloco o seu `Hash` será alterado.
+Consequentemente, todos os blocos posteriores a essa alteração também não serão mais considerados válidos.
+O motivo para isso é que, a partir do momento em que é modificado o `Hash` de um bloco, o valor de `Prev`, registrado no bloco posterior, não coincidirá mais.
+Logo, uma {blockchain} considerará todos os blocos inválidos a partir de algum que tenha sido adulterado em qualquer um de seus campos.
+
+Para fazer uma {blockchain} adulterada ser novamente considerada válida, alguns passos seriam necessários.
+Por exemplo, vamos supor que estamos fazendo uma alteração de dados apenas no último bloco.
+Nesse caso, tornar a {blockchain} válida é algo simples: basta recalcular o `Hash` desse bloco executando a operação `Miner`.
+Ou seja, executar o processo de mineração.
+
+O problema real surge ao ser feita uma tentativa de alterar um bloco que não é o último!
+Vamos ver também que a dificuldade de se alterar um bloco é gradativamente aumentada quando ele vai se aproximando do primeiro bloco (ou se distanciando do último).
+Suponhamos, por exemplo, que alguém tentasse fazer a adulteração de um dado no bloco 3.
+Para que isso fosse possível, a operação de mineração para todos deveria ser novamente realizada a partir desse bloco.
+Assim, o custo de tornar um bloco válido vai aumentando exponencialmente a medida em que ele se aproxima do primeiro bloco.
+
+Podemos observar, então, que uma {blockchain} é uma estrutura (ou um banco) de dados que rejeita modificações que não sejam no último bloco.
+Poderíamos fazer uma comparação com um livro onde só é possível se escrever na última página.
+E, continuando nessa linha, esse livro só poderia ser escrito a caneta.
+Por fim, qualquer tentativa de se modificar um dado registrado nesse livro o deixaria manchado (ou rasurado) para sempre.
+
+Uma {blockchain} é citada por muitos como sendo "o protocolo da confiança".
+Um dos motivos é decorrente do fato de somente ser possível se adicionar informações.
+Não são permitidas alterações de informação, pois, pelo que vimos, a rede rejeita mudanças através de seu protocolo.
+Finalmente, é importante entender que uma {blockchain} é uma estrutura de dados que fica "na mão de muitos".
+Ou seja, é descentralizada.
+Vamos agora entender como uma {blockchain} é considerada ainda mais segura quando ela é distribuída entre vários nós de uma rede.
+
+== A Blockchain é distribuída
+
+Vimos que uma {blockchain} é uma estrutura de dados confiável que só aceita inserções de dados.
+Ou seja, ela é resistente a mudanças.
+Mas, além disso, uma {blockchain} é também uma rede de computadores onde essa estrutura de dados é replicada.
+Dessa forma, sua estrutura de dados existe, distribuída, em cada um dos computadores (nós) dessa rede.
+
+O objetivo principal da distribuição de uma {blockchain} entre vários nós é impedir que mesmo sendo ela válida num único nó, ela só seja totalmente válida quando houver um consenso (na rede) de que suas informações também são válidas em todos os outros nós.
+Numa {blockchain}, os nós pertencentes a sua rede são responsáveis por validar dados e retransmití-los de forma que eles sejam replicados em todos os nós.
+Mais especificamente, quando dados precisam ser inseridos num bloco, todos os nós devem verificar se esses dados são válidos.
+Caso não sejam, esses dados serão descartados e não retransmitidos aos próximos nós.
+
+A validação de dados, obviamente, depende do que são esses dados.
+A primeira {blockchain} foi construída para resolver um problema complexo: a tranferência de valores.
+Dando crédito: *os conceitos de {blockchain} que estamos aprendendo surgiram para fazer a moeda digital {uri-bitcoin}[Bitcoin] entrar em funcionamento*.
+Perceba que só agora estamos falando de uma das várias possibilidades de aplicação da {blockchain}.
+Apresentaremos, ainda, vários outros casos de uso de uma {blockchain}.
+
+O que diferencia a solução da {blockchain}, dada para o Bitcoin, de soluções bancárias tradicionais que resolvem esse problema, entretanto, é a descentralização.
+Detalharemos mais sobre transações, logo a frente.
+Mas, por enquanto, é importante saber que uma {blockchain}, por ser descentralizada, precisa criar algoritmos que promovam a manutenção de um consenso entre os nós.
+
+É através de consenso que uma {blockchain} identifica se uma cópia de seus dados, que está num nó, é realmente válida ou não.
+Acessando a aba {uri-blockchain-demo-distributed}[Distributed] podemos identificar que a alteração de uma das cópias da {blockchain} num dos nós é possível de ser realizada.
+E, essa alteração pode, com certeza, tornar a cópia da {blockchain} válida nesse nó.
+Como vimos, para isso ocorrer, seria necessário refazer os cálculos de `Hash` para cada bloco a partir do que for modificado.
+Mas, caso isso ocorra, outros nós da rede percebem a diferença e, automaticamente, eliminam a participação do nó que possui a {blockchain} adulterada.
+Isso é feito através de consenso.
+A rede que está certa é a rede que detém a maioria do consenso (51%).
+
+== A Blockchain utilizada no controle de transações: o Bitcoin
