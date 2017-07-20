@@ -3,17 +3,17 @@ extends layout
 block content
   .container
 
-    h1 SHA256 Hash
+    h1 SHA256 #{__('Hash')}
     .well#well1
       form.form-horizontal
 
         .form-group
-          label.col-sm-2.control-label(for='data') Data:
+          label.col-sm-2.control-label(for='data') #{__('Data')}:
           .col-sm-10
             textarea#data.form-control(rows='10', onkeyup='$("#hash").val(sha256())')
 
         .form-group
-          label.col-sm-2.control-label(for='hash') Hash:
+          label.col-sm-2.control-label(for='hash') #{__('Hash')}:
           .col-sm-10
             input#hash.form-control(type='text', disabled)
 
