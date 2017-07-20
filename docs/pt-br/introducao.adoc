@@ -3,6 +3,14 @@
 
 Este projeto provê uma aplicação web para demonstrar conceitos básicos e fundamentais de uma {blockchain} (ou, traduzindo ao pé da letra para o português, corrente de blocos).
 
+ifdef::backend-html5[]
+[NOTE]
+====
+Você também pode baixar e ler este documento em formato PDF. Para isso, acesse:
+{uri-blockchain-demo-2-docs-pt-br}/blockchain-demo.pdf.
+====
+endif::[]
+
 Essa demonstração pode ser visualizada em duas versões:
 
 * Versão original (em inglês) (criada por {uri-andersbrownworth}[Anders Brownworth]). Vídeos:

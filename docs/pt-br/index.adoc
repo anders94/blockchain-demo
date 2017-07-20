@@ -1,5 +1,5 @@
 = Blockchain: Uma visualização gráfica
-:author: Paulo Jerônimo
+Paulo Jerônimo <pj@paulojeronimo.com>
 :toc:
 :toc-title: Conteúdo
 :toclevels: 4
@@ -8,14 +8,12 @@
 
 :srcdir: ../..
 
+:blockchain: Blockchain
+:rootdir: blockchain-demo
+
 ifdef::backend-html5[]
 :rootdir: ../..
 :blockchain: pass:[<b>Blockchain</b>]
-endif::[]
-
-ifdef::backend-pdf[]
-:rootdir: blockchain-demo
-:blockchain: Blockchain
 endif::[]
 
 include::uris.conf[]
