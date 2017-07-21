@@ -1,2 +1,0 @@
-[[a-blockchain-utilizada-no-controle-de-transacaoes]]
-= A Blockchain utilizada no controle de transações: o Bitcoin

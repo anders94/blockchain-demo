@@ -1,5 +1,5 @@
 [[instalacao]]
-= Instalação
+= Instalação local
 
 :leveloffset: +1
 

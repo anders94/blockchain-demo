@@ -1,0 +1,2 @@
+[[a-blockchain-utilizada-no-controle-de-transacaoes]]
+= icon:dollar[] A Blockchain utilizada no controle de transações: o Bitcoin

@@ -1,0 +1,3 @@
+:PauloJeronimo: {uri-paulojeronimo}[Paulo Jerônimo]
+:AndersBrownworth: {uri-andersbrownworth}[Anders Brownworth]
+:blockchain4devs: {uri-blockchain4devs}[blockchain4devs]

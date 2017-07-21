@@ -10,6 +10,7 @@ config=build.conf
 [ -f "$BASE_DIR"/$config ] || config=$config.sample
 source "$BASE_DIR"/$config
 
+# called automatically when you invoke this script
 check_prerequisites() {
   which asciidoctor > /dev/null || {
     echo "ERROR: install asciidoctor first!"
@@ -33,12 +34,14 @@ check_prerequisites() {
   fi
 }
 
-clean() {
+# used to remove generated docs (HTML and/or PDF)
+_clean() {
   rm -f index.{html,xml}
   rm -f $pdf_name $xml_name
 }
 
-build() {
+# used to build the main doc (HTML and/or PDF)
+_build() {
   local result
 
   asciidoctor index.adoc
@@ -55,7 +58,8 @@ build() {
   fi
 }
 
-publish() {
+# used to publish the generated docs to GitHub Pages
+_publish() {
   local published_dir=`mktemp -d`
   local remote_repo=`git config --get remote.origin.url`
   [ ".$remote_repo" = "." ] && {
@@ -85,8 +89,8 @@ check_prerequisites
 cd "$BASE_DIR"
 op=$1
 [ "$op" ] || op=build
-type $op &> /dev/null || {
-  echo "\"$op\" isn't an option!"
+type _$op &> /dev/null || {
+  echo "Usage: `basename $0` [build]|<clean|publish>"
   exit 1
 }
-$op
+_$op

@@ -1,5 +1,0 @@
-= Hyperledger
-
-:leveloffset: +1
-
-:leveloffset: -1

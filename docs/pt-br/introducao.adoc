@@ -13,9 +13,9 @@ endif::[]
 
 Essa demonstração pode ser visualizada em duas versões:
 
-* Versão original (em inglês) (criada por {uri-andersbrownworth}[Anders Brownworth]). Vídeos:
+* Versão original (em inglês) (criada por {AndersBrownworth}). Vídeos:
 ** {uri-blockchain-101-demo}[Blockchain 101 - Demo]
-* Versão brasileira (criada por {uri-paulojeronimo}[Paulo Jerônimo] para a organização {uri-blockchain4devs}. Vídeos [red]#(em produção)#:
+* Versão brasileira (criada por {PauloJeronimo} para a organização {blockchain4devs}. Vídeos [red]#(em produção)#:
 ** blockchain-demo - instalação
 ** blockchain-demo - o que é um Hash?
 ** blockchain-demo - o que é um Bloco?

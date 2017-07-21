@@ -11,4 +11,6 @@ include::o-que-e-um-bloco.adoc[]
 
 include::o-que-e-uma-blockchain/index.adoc[]
 
+include::a-blockchain-utilizada-no-controle-de-transacoes.adoc[]
+
 :leveloffset: -1
