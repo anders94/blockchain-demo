@@ -1,7 +1,7 @@
 [[o-que-e-um-bloco]]
 = O que é um Bloco?
 
-Vamos agora para a aba {uri-blockchain-demo-block}[Block].
+Vamos agora para a {uri-blockchain-demo-block}[aba Block].
 Adicionaremos, acima do campo `Data` aprensentado na aba `Hash`, dois outros campos: `Block` e `Nonce`.
 Eles serão explicados agora.
 Também vamos criar um botão `Miner` e explicar qual será sua utilidade.

@@ -5,6 +5,6 @@
 
 include::uma-visualizacao-grafica.adoc[]
 
-include::a-blockchain-e-distribuida.adoc[]
+include::a-blockchain-e-distribuida-e-descentralizada.adoc[]
 
 :leveloffset: -1

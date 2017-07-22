@@ -1,31 +1,44 @@
 [[introducao]]
 = Introdução
 
-Este projeto provê uma aplicação web para demonstrar conceitos básicos e fundamentais de uma {blockchain} (ou, traduzindo ao pé da letra para o português, corrente de blocos).
+Este projeto provê uma aplicação web, interativa, para demonstrar conceitos básicos e fundamentais de uma {blockchain} (ou, traduzindo ao pé da letra para o português, corrente de blocos).
+
+[NOTE]
+====
+O {uri-blockchain-demo-2-src}[código fonte deste projeto] (incluindo este documento) é aberto e está disponível.
+====
 
 ifdef::backend-html5[]
 [NOTE]
 ====
-Você também pode baixar e ler este documento em formato PDF. Para isso, acesse:
-{uri-blockchain-demo-2-docs-pt-br}/blockchain-demo.pdf.
+Você também pode {uri-blockchain-demo-2-docs-pt-br}/blockchain-demo.pdf[baixar e ler este documento em formato PDF].
 ====
 endif::[]
 
-Essa demonstração pode ser visualizada em duas versões:
+ifndef::backend-html5[]
+[NOTE]
+====
+Você pode visualizar uma versão online deste documento acessando o endereço {uri-blockchain-demo-2-docs-pt-br}.
+====
+endif::[]
 
-* Versão original (em inglês) (criada por {AndersBrownworth}). Vídeos:
+A demonstração de uso da aplicação deste projeto pode ser visualizada em duas (2) versões:
+
+* 1) Versão original (em inglês) (criada por {AndersBrownworth}). Vídeos:
 ** {uri-blockchain-101-demo}[Blockchain 101 - Demo]
-* Versão brasileira (criada por {PauloJeronimo} para a organização {blockchain4devs}. Vídeos [red]#(em produção)#:
-** blockchain-demo - instalação
-** blockchain-demo - o que é um Hash?
-** blockchain-demo - o que é um Bloco?
+* 2) Versão brasileira (criada por {PauloJeronimo} para a organização {blockchain4devs}. Vídeos [red]#(em produção)#:
+** blockchain-demo - instalação local
+** blockchain-demo - o que é um hash?
+** blockchain-demo - o que é um bloco?
 ** blockchain-demo - uma visualização gráfica da Blockchain
 ** blockchain-demo - a blockchain é distribuída
-** blockchain-demo - a blockchain utilizada no controle de transações (o Bitcoin)
+** blockchain-demo - a blockchain utilizada no controle de transações - o Bitcoin
 
 Através dos vídeos acima é feita uma apresentação, visual, que consideramos ser bastante elucidante nos conceitos elementares de uma {blockchain}.
-É introduzido o conceito de um {uri-livro-razao}[livro-razão] (distribuído) através de uma aplicação web interativa.
-
-Essa aplicação web está disponível (em execução) no seguinte endereço:
+A aplicação apresentada introduz o conceito de um {uri-livro-razao}[livro-razão] (distribuído).
+Ela está em execução, neste momento, no seguinte endereço:
 
 * {uri-anders-blockchain}
+
+Você também pode fazer o {uri-blockchain-demo-2-src}[download deste projeto] a partir do GitHub e fazer a execução dessa aplicação, localmente, em teu ambiente.
+Isso é explicado logo a seguir, no primeiro tópico desse documento.

@@ -6,7 +6,7 @@ Hashes são parte de várias informações armazenadas na {blockchain} e são es
 Matematicamente falando, uma {uri-funcao-hash}[função hash] é um algoritmo que mapeia dados de comprimento variável para dados de comprimento fixo.
 Os valores retornados por uma função hash são chamados valores hash, códigos hash, somas hash, checksums ou, simplesmente, hashes.
 
-Nessa demonstração, a aba {uri-blockchain-demo-hash}[Hash] possibilita a entrada de uma informação de tamanho qualquer (no campo `Data`) e produz um `Hash` de tamanho fixo.
+Nessa demonstração, a {uri-blockchain-demo-hash}[aba Hash] possibilita a entrada de uma informação de tamanho qualquer (no campo `Data`) e produz um `Hash` de tamanho fixo.
 A função SHA256 é uma das variantes do {uri-sha-2}[SHA-2] e utilizada para gerar esse código hash.
 Esse código é geralmente representado por uma string de 64 caracteres hexadecimais (de "0" a "9" e de "a" a "f").
 Obviamente, além dessa função, existem várias outras que poderiam ser utilizadas para gerar uma string de tamanho fixo a partir de uma quantidade de dados variáveis.
@@ -30,11 +30,11 @@ diff shattered-*.pdf
 shasum shattered-*.pdf
 ----
 
-O código JavaScript da {uri-blockchain-demo-hash}[página Hash] é um código escrito em Jade (link:{rootdir}/views/hash.jade[]).
+O código JavaScript da {uri-blockchain-demo-hash}[aba Hash] (`views/hash.jade`) é um código escrito em {uri-jade}[Jade].
 Ele calcula o hash através de um código (em JavaScript) que executa a função sha256.
 
 [source,javascript]
-.{rootdir}/public/javascripts/lib/sha256.js
+.public/javascripts/lib/sha256.js
 ----
 include::{srcdir}/public/javascripts/blockchain.js[lines=1..4]
 ----

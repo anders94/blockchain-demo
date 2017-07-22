@@ -5,16 +5,9 @@ V1.0, {localdatetime}
 :toc-title: Conteúdo
 :toclevels: 4
 :icons: font
+:setanchors:
 
 :srcdir: ../..
-
-:blockchain: Blockchain
-:rootdir: blockchain-demo
-
-ifdef::backend-html5[]
-:rootdir: ../..
-:blockchain: pass:[<b>Blockchain</b>]
-endif::[]
 
 include::uris.conf[]
 include::definitions.adoc[]
