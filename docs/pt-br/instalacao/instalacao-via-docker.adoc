@@ -19,7 +19,7 @@ Abra o teu browser e acesse a URL da página de demonstração: http://localhost
 
 [NOTE]
 ====
-Se você estiver utilizando outro SO que não o Linux, no macOS por exemplo, antes de executar o `docker-compose`, será necessário a instalação e a configuração do {uri-docker-machine}[docker-machine].
+Se você estiver utilizando outro SO que não o Linux (um {macOS} por exemplo) antes de executar o `docker-compose`, será necessário a instalação e a configuração do {uri-docker-machine}[docker-machine].
 Além disso, a URL que você acessará no browser não estará em `localhost`.
 Nesse caso, siga os passos no subtópico a seguir.
 Ele demonstra como utilizar o `docker-machine` para criar uma máquina virtual utilizando o {uri-virtualbox}[VirtualBox].
@@ -38,7 +38,7 @@ Abra o teu browser e acesse a URL da página de demonstração que devera ser `h
 [NOTE]
 ====
 O comando `docker-machine ip` pode ser chamada para determinar o IP da máquina virtual executando o docker.
-Então, no macOS, o seguinte comando pode ser utilizado para abrir a browser na URL da demonstração:
+Então, no {macOS}, o seguinte comando pode ser utilizado para abrir a browser na URL da demonstração:
 
 ----
 open http://$(docker-machine ip):3000

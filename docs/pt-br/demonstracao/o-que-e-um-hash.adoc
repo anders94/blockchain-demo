@@ -22,12 +22,22 @@ O site {uri-shattered} demonstra que, para se proferir um ataque onde se tentari
 Ou seja, um número monstruoso de compressões.
 Para ser realizado esse número de compressões, seriam necessários 6.500 anos de processamento de uma CPU comum (ou 110 anos de uma GPU).
 
-Uma colisão de SHA-1 é demonstrada na saída dos seguintes comandos (executados num macOS):
+Uma colisão de SHA-1 pode ser visualizada, como na execução/resultado dos comandos apresentados a seguir:
+
+[NOTE]
+====
+Essa execução/resultado de comandos é feita num shell (Bash) de um {macOS}.
+Mas, ela também pode ser adaptada e realizada em outros sistemas operacionais.
+====
 
 ----
-for i in 1 2; do curl -O https://shattered.it/static/shattered-i.pdf; done
-diff shattered-*.pdf
-shasum shattered-*.pdf
+$ for n in 1 2; do curl -s -O https://shattered.it/static/shattered-$n.pdf; done
+$ open shattered-*.pdf
+$ diff shattered-*.pdf
+Binary files shattered-1.pdf and shattered-2.pdf differ
+$ shasum shattered-*.pdf
+38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-1.pdf
+38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-2.pdf
 ----
 
 O código JavaScript da {uri-blockchain-demo-hash}[aba Hash] (`views/hash.jade`) é um código escrito em {uri-jade}[Jade].

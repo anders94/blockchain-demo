@@ -4,6 +4,7 @@
 :blockchain-demo-src: {uri-blockchain4devs}/blockchain-demo
 :blockchain: Blockchain
 :rootdir: link:{uri-blockchain-demo-2}[blockchain-demo]
+:macOS: {uri-macOS}[macOS]
 
 ifdef::backend-html5[]
 :rootdir: ../..
