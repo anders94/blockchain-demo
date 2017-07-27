@@ -55,4 +55,7 @@ http://localhost:3000
 ```
 
 ## Send Thanks
+
+![](public/images/qr.png)
+
 Bitcoin greatfully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
