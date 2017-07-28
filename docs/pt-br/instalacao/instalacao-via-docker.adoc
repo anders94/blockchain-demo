@@ -5,7 +5,7 @@ Baixe o código:
 
 [source,bash,subs="attributes"]
 ----
-git clone {uri-blockchain-demo}
+git clone {uri-blockchain-demo-src}
 ----
 
 Faça a construção do contêiner Docker:

@@ -5,7 +5,7 @@ Baixe o código:
 
 [source,bash,subs="attributes"]
 ----
-git clone {uri-blockchain-demo}
+git clone {uri-blockchain-demo-src}
 ----
 
 Para rodar essa aplicação, você deverá ter instalado o {uri-nodejs}[Node.js]. Em seguida, instale as dependências dessa aplicação através do {uri-npm}[npm].
