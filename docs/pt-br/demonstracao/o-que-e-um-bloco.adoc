@@ -31,4 +31,4 @@ Por outro lado, ela é onerosa pois pode cosumir muito tempo de processamento.
 O trabalho de "mineração" realizado dessa forma é também conhecido por {uri-proof-of-work}["Proof of Work"].
 
 Após um bloco ser "minerado", a conferência de sua validade é algo extremamente simples e rápido.
-Essa conferência é apenas o cálculo do `Hash` de `Data` + `Nonce` e a obediência a regra estabelecida (em nosso caso, um `Hash` começando com quatro zeros iniciais).
+Essa conferência é apenas o cálculo do `Hash` de todos os campos (`Block` + `Nonce` + `Data`) e a obediência a regra estabelecida (em nosso caso, um `Hash` começando com quatro zeros iniciais).

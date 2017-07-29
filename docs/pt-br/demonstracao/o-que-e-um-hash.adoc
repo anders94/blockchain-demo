@@ -64,4 +64,4 @@ Então, o hash de "Paulo Jerônimo" poderia ser calculado assim:
 echo -n 'Paulo Jerônimo'|shasum -a 256
 ----
 
-Para se aprofundar um pouco mais em funções hash aplicadas a moedas digitais e saber quando um colisões em valores de hash tem importância nesse contexto, recomenda-se a leitura do artigo {uri-history-of-hash-function-attacks}["Lessons From The History Of Attacks On Secure Hash Functions"].
+Para se aprofundar um pouco mais em funções hash aplicadas a moedas digitais e saber quando colisões em valores de hash tem importância nesse contexto, recomenda-se a leitura do artigo {uri-history-of-hash-function-attacks}["Lessons From The History Of Attacks On Secure Hash Functions"].

@@ -24,15 +24,8 @@ endif::[]
 
 A demonstração de uso da aplicação deste projeto pode ser visualizada em duas (2) versões:
 
-* 1) Versão original (em inglês) (criada por {AndersBrownworth}). Vídeos:
-** {uri-blockchain-101-demo}[Blockchain 101 - Demo]
-* 2) Versão brasileira (criada por {PauloJeronimo} para a organização {blockchain4devs}. Vídeos [red]#(em produção)#:
-** blockchain-demo - instalação local
-** blockchain-demo - o que é um hash?
-** blockchain-demo - o que é um bloco?
-** blockchain-demo - uma visualização gráfica da Blockchain
-** blockchain-demo - a blockchain é distribuída
-** blockchain-demo - a blockchain utilizada no controle de transações - o Bitcoin
+. {uri-blockchain-101-demo}[Blockchain 101 - Demo]: Vídeo original (em inglês) (criado por {AndersBrownworth}).
+. {uri-blockchain-demo-2-playlist}[Blockchain: uma visualização gráfica]: Playlist com 10 vídeos, em português do Brasil, criados por {PauloJeronimo} para a organização {blockchain4devs}. `Plus`: {uri-blockchain-dfjug}[Blockchain]: hangout (apresentação), sobre esse assunto, com o {uri-dfjug}[DFJUG].
 
 Através dos vídeos acima é feita uma apresentação, visual, que consideramos ser bastante elucidante nos conceitos elementares de uma {blockchain}.
 A aplicação apresentada introduz o conceito de um {uri-livro-razao}[livro-razão] (distribuído).

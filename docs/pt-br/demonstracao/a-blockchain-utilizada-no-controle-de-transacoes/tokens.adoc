@@ -26,7 +26,7 @@ Então, num sistema como o Bitcoin, ao invés de utilizarmos nomes, utilizamos e
 
 Da mesma forma que não queremos adulterações nos dados, devemos evitar outras possibilidades de fraudes.
 Há um tipo de fraude que não seria possível de ser verificada numa {blockchain} implementada da forma como estamos fazendo agora.
-Essa fraude seria uma pessoa tentar querer "gastar" o mesmo diheiro duas vezes.
+Essa fraude seria uma pessoa tentar "gastar" o mesmo diheiro duas vezes.
 Isso é conhecido como "gasto duplo".
 
 Exemplificando a possibilidade de gasto duplo através de um passo a passo:
