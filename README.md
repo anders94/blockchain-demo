@@ -67,8 +67,8 @@ assumes 4 zeros for a signed block. For example, on the `http://localhost:3000/b
 with a difficulty of 6, the first nonce that works is `8719932` yielding a hash of
 `000000669445c22167511857d8f3b822b331c3342f25dfdcb326e35c1a7aa267`.
 
-Currently in production blockchains such as bitcoin, an example successful hash looks like 
-`000000000000000000ff10807faff9fd6de55f79c73177ddc127527051401185`. That's 18 zeros in a row!
+In the production bitcoin blockchain, block `458091` has the hash digest
+`00000000000000000000011246f099d94f91628d71c9d75ad2f9a06e2beb7e92`. That's 21 zeros in a row!
 
 ## Send Thanks
 
