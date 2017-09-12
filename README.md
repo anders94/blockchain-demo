@@ -58,7 +58,7 @@ http://localhost:3000
 You can adjust the "number of zeros" required by the demo by editing the first two lines of
 `public/javascripts/blockchain.js`.
 
-Because there are 16 possible characters in a hex value, each time you incrament the difficulty
+Because there are 16 possible characters in a hex value, each time you increment the difficulty
 by one you make the puzzle 16 times harder. In my testing, a difficulty of 6 requires a
 maximumNonce well over 500,000,000.
 
