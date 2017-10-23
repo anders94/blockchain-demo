@@ -24,13 +24,13 @@ npm install
 Run the server:
 
 ```
-./bin/www
+node ./bin/blockchain-demo.js
 ```
 
 Point a web browser at the demo:
 
 ```
-http://localhost:3000
+http://localhost:8080
 ```
 
 ## Setup using Docker
@@ -51,7 +51,7 @@ docker-compose up -d
 Point a web browser at the demo:
 
 ```
-http://localhost:3000
+http://localhost:8080
 ```
 
 ## Optional Configuration
