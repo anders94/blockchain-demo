@@ -20,7 +20,7 @@
       "start" : "node .bin/blockchain-demo.js",
       "poststart": "console.log('open browser and visit localhost:8080')"
     }
-  }
+  },
   "bugs": {
     "url": "https://github.com/anders94/blockchain-demo/issues"
   },
