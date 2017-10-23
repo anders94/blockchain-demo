@@ -18,7 +18,7 @@
     { 
       "prestart": "npm install",
       "start" : "node .bin/blockchain-demo.js",
-      "poststart": "console.log("open browser and visit 'localhost:8080'")"
+      "poststart": "console.log('open browser and visit localhost:8080')"
     }
   }
   "bugs": {
