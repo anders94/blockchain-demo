@@ -10,6 +10,9 @@
     "demo",
     "bitcoin"
   ],
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anders94/blockchain-demo.git"

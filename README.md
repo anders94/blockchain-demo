@@ -24,6 +24,12 @@ npm install
 Run the server:
 
 ```
+npm start
+```
+
+OR
+
+```
 ./bin/www
 ```
 
