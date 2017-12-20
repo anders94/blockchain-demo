@@ -32,6 +32,10 @@ OR
 ```
 ./bin/www
 ```
+#For windows: if the above command didn't work, use this (make sure you have Node.js installed in your system):
+```
+node ./bin/www      
+```
 
 Point a web browser at the demo:
 
@@ -80,4 +84,4 @@ In the production bitcoin blockchain, block `458091` has the hash digest
 
 ![](public/images/qr.png)
 
-Bitcoin greatfully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
+Bitcoin gratefully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
