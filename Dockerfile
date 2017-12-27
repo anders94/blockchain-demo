@@ -10,6 +10,6 @@ COPY       package.json /blockchain-demo
 
 RUN        npm install
 
-COPY       . /blockchain-demo
+COPY       . /blockchain-demo 
 
-CMD        ["npm start ./bin/blockchain-demo.js"]
+CMD        ["bin/www"]
