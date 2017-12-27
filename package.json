@@ -16,7 +16,7 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "node ./bin/blockchain-demo.js",
+    "start": "node ./bin/www",
     "poststart": "console.log('open browser and visit localhost:3000')"
   },
   "bugs": {
