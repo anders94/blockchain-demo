@@ -1,4 +1,4 @@
-FROM       node:alpine
+FROM       node:alpine 
 
 MAINTAINER https://github.com/anders94/blockchain-demo
 
@@ -10,6 +10,6 @@ COPY       package.json /blockchain-demo
 
 RUN        npm install
 
-COPY       . /blockchain-demo 
+COPY       . /blockchain-demo
 
 CMD        ["bin/www"]
