@@ -1,0 +1,19 @@
+{
+	"Hash": "Hash",
+	"Data": "Veri",
+	"Block": "Blok",
+	"Nonce": "Nonce",
+	"Mine": "Kaz",
+	"Blockchain Demo": "Blok Zinciri Demo",
+	"Blockchain": "Blok Zinciri",
+	"Distributed": "Dağıtık",
+	"Tokens": "Tokenlar",
+	"Coinbase": "Coinbase",
+	"Prev": "Önceki",
+	"Distributed Blockchain": "Dağıtık Block Zinciri",
+	"Peer": "Eş",
+	"Tx": "Tx",
+	"$": "TL",
+	"From": "Kimden",
+	"Coinbase Transactions": "Coinbase İşlemleri"
+}
