@@ -10,6 +10,9 @@
     "demo",
     "bitcoin"
   ],
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anders94/blockchain-demo.git"
@@ -26,7 +29,8 @@
     "cookie-parser": "^1.4.3",
     "body-parser": "~1.15.2",
     "debug": "~2.2.0",
-    "jade": "~1.11.0"
+    "jade": "~1.11.0",
+    "i18n": "0.8.3"
   },
   "homepage": "https://github.com/anders94/blockchain-demo#readme",
   "maintainers": [
