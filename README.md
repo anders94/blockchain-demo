@@ -24,7 +24,17 @@ npm install
 Run the server:
 
 ```
+npm start
+```
+
+OR
+
+```
 ./bin/www
+```
+#For windows: if the above command didn't work, use this (make sure you have Node.js installed in your system):
+```
+node ./bin/www      
 ```
 
 Point a web browser at the demo:
@@ -58,7 +68,7 @@ http://localhost:3000
 You can adjust the "number of zeros" required by the demo by editing the first two lines of
 `public/javascripts/blockchain.js`.
 
-Because there are 16 possible characters in a hex value, each time you incrament the difficulty
+Because there are 16 possible characters in a hex value, each time you increment the difficulty
 by one you make the puzzle 16 times harder. In my testing, a difficulty of 6 requires a
 maximumNonce well over 500,000,000.
 
@@ -67,11 +77,16 @@ assumes 4 zeros for a signed block. For example, on the `http://localhost:3000/b
 with a difficulty of 6, the first nonce that works is `8719932` yielding a hash of
 `000000669445c22167511857d8f3b822b331c3342f25dfdcb326e35c1a7aa267`.
 
-Currently in production blockchains such as bitcoin, an example successful hash looks like 
-`000000000000000000ff10807faff9fd6de55f79c73177ddc127527051401185`. That's 18 zeros in a row!
+In the production bitcoin blockchain, block `458091` has the hash digest
+`00000000000000000000011246f099d94f91628d71c9d75ad2f9a06e2beb7e92`. That's 21 zeros in a row!
+
+### Public Private Key Demo
+
+The 2nd part of the 101 session:
+* https://github.com/anders94/public-private-key-demo
 
 ## Send Thanks
 
 ![](public/images/qr.png)
 
-Bitcoin greatfully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
+Bitcoin gratefully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`

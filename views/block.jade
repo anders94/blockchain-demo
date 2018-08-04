@@ -11,7 +11,7 @@ block content
           .col-sm-10
             .input-group
               span.input-group-addon #
-              input#block1chain1number.form-control(type='text', value='1' onkeyup='updateHash(1, 1);')
+              input#block1chain1number.form-control(type='number', value='1' onchange='updateHash(1, 1);' onkeyup='updateHash(1, 1);')
 
         .form-group
           label.col-sm-2.control-label(for='block1chain1nonce') #{__('Nonce')}:
