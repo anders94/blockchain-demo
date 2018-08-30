@@ -4,7 +4,7 @@ block content
   .container-fluid
     h1 #{__('Blockchain')}
     .row.row-horizon
-      - var blocks = []
+      - let blocks = []
       - blocks.push({block: 1, chain: 1, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
       - blocks.push({block: 2, chain: 1, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
       - blocks.push({block: 3, chain: 1, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
@@ -12,33 +12,33 @@ block content
       - blocks.push({block: 5, chain: 1, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
       each block in blocks
         .col-xs-7
-          include includes/block.jade
+          include includes/block.pug
 
   script.
     $(function() {
-      setup(1, 1);
-      setup(2, 1);
-      setup(3, 1);
-      setup(4, 1);
-      setup(5, 1);
-    });
+      setup(1, 1)
+      setup(2, 1)
+      setup(3, 1)
+      setup(4, 1)
+      setup(5, 1)
+    })
 
     function getText(block, chain) {
       return $('#block'+block+'chain'+chain+'number').val() +
              $('#block'+block+'chain'+chain+'nonce').val() +
              $('#block'+block+'chain'+chain+'data').val() +
-             $('#block'+block+'chain'+chain+'previous').val();
+             $('#block'+block+'chain'+chain+'previous').val()
     }
 
     function setup(block, chain) {
-      updateHash(block, chain);
+      updateHash(block, chain)
       $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
-          e.preventDefault();
-          var l = Ladda.create(this);
-          l.start();
-          setTimeout(function() {
-              mine(block, chain, true);
-              l.stop();
-            }, 250); // give UI time to update
-        });
+          e.preventDefault()
+          const l = Ladda.create(this)
+          l.start()
+          setTimeout(() => {
+              mine(block, chain, true)
+              l.stop()
+            }, 250) // give UI time to update
+        })
     }
