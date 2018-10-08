@@ -90,3 +90,5 @@ The 2nd part of the 101 session:
 ![](public/images/qr.png)
 
 Bitcoin gratefully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
+And then enjoy.
+Don't forget to thank the original contributor, cheers.
