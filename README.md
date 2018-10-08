@@ -85,3 +85,5 @@ In the production bitcoin blockchain, block `458091` has the hash digest
 ![](public/images/qr.png)
 
 Bitcoin gratefully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
+And then enjoy.
+Don't forget to thank the original contributor, cheers.
