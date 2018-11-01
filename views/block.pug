@@ -37,24 +37,24 @@ block content
 
   script.
     $(function() {
-      mineButtonAnimation(1, 1);
-      updateHash(1, 1);
-    });
+      mineButtonAnimation(1, 1)
+      updateHash(1, 1)
+    })
 
     function getText(block, chain) {
       return $('#block'+block+'chain'+chain+'number').val() +
              $('#block'+block+'chain'+chain+'nonce').val() +
-             $('#block'+block+'chain'+chain+'data').val();
+             $('#block'+block+'chain'+chain+'data').val()
     }
 
     function mineButtonAnimation(block, chain) {
       $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
-          e.preventDefault();
-          var l = Ladda.create(this);
-          l.start();
-          setTimeout(function() {
-              mine(block, chain, false);
-              l.stop();
-            }, 250); // give UI time to update
-        });
+          e.preventDefault()
+          const l = Ladda.create(this)
+          l.start()
+          setTimeout(() => {
+              mine(block, chain, false)
+              l.stop()
+            }, 250) // give UI time to update
+        })
     }
