@@ -6,7 +6,7 @@
       .col-sm-10
         .input-group
           span.input-group-addon #
-          input.form-control(id='block#{block.block}chain#{block.chain}number', type='text', value='#{block.block}' onkeyup='updateChain(#{block.block}, #{block.chain});')
+          input.form-control(id='block#{block.block}chain#{block.chain}number', type='number', value='#{block.block}' onchange='updateChain(#{block.block}, #{block.chain});' onkeyup='updateChain(#{block.block}, #{block.chain});')
 
     .form-group
       label.col-sm-2.control-label(for='block#{block.block}chain#{block.chain}nonce') #{__('Nonce')}:
