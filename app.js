@@ -56,7 +56,7 @@ app.use(function(err, req, res, next) {
 });
 
 i18n.configure({
-  locales:['en', 'de', 'es', 'hi', 'ja', 'ko', 'nl', 'pl', 'pt', 'zh-CN'],
+  locales:['en', 'de', 'es', 'fr-CA', 'hi', 'ja', 'ko', 'nl', 'pl', 'pt', 'zh-CN'],
   directory: __dirname + '/locales'
 });
 
