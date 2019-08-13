@@ -1,0 +1,20 @@
+{
+	"Hash": "Hash",
+	"Data": "Adat",
+	"Block": "Blokk",
+	"Nonce": "Nonce",
+	"Mine": "Kibányászás",
+	"Blockchain Demo": "Blokklánc bemutató",
+	"Blockchain": "Blokklánc",
+	"Distributed": "Elosztott blokklánc",
+	"Tokens": "Tokenek",
+	"Coinbase": "Coinbase tranzakció",
+	"Prev": "Előző",
+	"Distributed Blockchain": "Elosztott blokklánc",
+	"Tx": "Tx",
+	"$": "₿",
+	"From": "Kitől",
+	"Coinbase Transactions": "Coinbase (bányász jutalom) tranzakciók",
+	"Peer": "Csomópont",
+	"->": "Kinek"
+}
