@@ -23,14 +23,14 @@
   "license": "MIT",
   "dependencies": {
     "async": "^1.4.2",
-    "express": "^4.13.4",
-    "serve-favicon": "^2.3.0",
-    "morgan": ">=1.9.1",
-    "cookie-parser": "^1.4.3",
-    "body-parser": "~1.15.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "debug": ">=2.6.9",
+    "express": "^4.17.1",
+    "i18n": "0.8.3",
     "jade": "~1.11.0",
-    "i18n": "0.8.3"
+    "morgan": ">=1.9.1",
+    "serve-favicon": "^2.5.0"
   },
   "homepage": "https://github.com/anders94/blockchain-demo#readme",
   "maintainers": [
