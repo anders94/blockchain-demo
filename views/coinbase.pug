@@ -4,7 +4,7 @@ block content
   .container-fluid
     h1 #{__('Coinbase Transactions')}
     - var peers = {1: 'A', 2: 'B', 3: 'C'}
-    - each peer, chain in peers
+    each peer, chain in peers
       h3 #{__('Peer')} #{peer}
       .row.row-horizon
         - var blocks = []
@@ -15,7 +15,7 @@ block content
         - blocks.push({block: 5, chain: chain, nonce: 108899, coinbasevalue: '100.00', coinbaseto: 'Sophia', txs: [{value: '2.00', from: 'Jackson', to: 'Alexander'},{value: '6.00', from: 'Ryan', to: 'Carter'},{value: '4.00', from: 'Ryan', to: 'Riley'},{value: '9.95', from: 'Grace', to: 'Katherine'}], previous: '0000c694336f88129f3685bd3ba5d67c445dfd8d18bd22f5d87301dd560eb30e'})
         each block in blocks
           .col-xs-7
-            include includes/coinbaseblock.jade
+            include includes/coinbaseblock
 
   script.
     $(function() {
