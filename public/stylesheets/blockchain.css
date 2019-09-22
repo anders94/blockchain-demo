@@ -44,3 +44,17 @@ input {
   border: 0;
   z-index: 20000;
 }
+
+/* FIX Fork me on Github logo on small screens */
+
+@media only screen and (max-width: 1380px) {
+  .github-ribbon {
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 828px) {
+  .github-ribbon {
+    display: none;
+  }
+}
