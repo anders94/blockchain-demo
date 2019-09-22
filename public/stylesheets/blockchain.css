@@ -58,3 +58,8 @@ input {
     display: none;
   }
 }
+
+.index-video {
+  max-width: 800px;
+  margin: auto;
+}
