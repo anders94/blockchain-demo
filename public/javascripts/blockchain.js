@@ -1,5 +1,5 @@
-var difficulty = 4;        // number of zeros required at front of hash
-var maximumNonce = 500000; // limit the nonce to this so we don't mine too long
+var difficulty = 10;        // number of zeros required at front of hash
+var maximumNonce = 500000000; // limit the nonce to this so we don't mine too long
 
 // NOTE: Because there are 16 possible characters in a hex value, each time you increment
 // the difficulty by one you make the puzzle 16 times harder. In my testing, a difficulty
