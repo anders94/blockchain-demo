@@ -5,5 +5,13 @@
 	"Blockchain": "Blockchain",
 	"Distributed": "Distributed",
 	"Tokens": "Tokens",
-	"Coinbase": "Coinbase"
+	"Coinbase": "Coinbase",
+	"Coinbase Transactions": "Coinbase Transactions",
+	"Peer": "Peer",
+	"Nonce": "Nonce",
+	"$": "BTC",
+	"Tx": "Tx",
+	"Prev": "Prev",
+	"Mine": "Mine",
+	"From": "From"
 }
