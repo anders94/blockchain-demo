@@ -1,0 +1,96 @@
+#!/bin/bash
+set +x
+set -e
+
+BASE_DIR=`cd "$(dirname "$0")"; pwd`
+PROJECT_DIR=`cd "$BASE_DIR/../.."; pwd`
+RELATIVE_DIR=${BASE_DIR##$PROJECT_DIR/}
+
+config=build.conf
+[ -f "$BASE_DIR"/$config ] || config=$config.sample
+source "$BASE_DIR"/$config
+
+# called automatically when you invoke this script
+check_prerequisites() {
+  which asciidoctor > /dev/null || {
+    echo "ERROR: install asciidoctor first!"
+    exit 1
+  }
+
+  if $generate_pdf
+  then
+    if $use_fopub
+    then
+      [ -x "$fopub" ] || {
+        echo "ERROR: can't execute $fopub!"
+        exit 1
+      }
+    else
+      which asciidoctor-pdf > /dev/null || {
+        echo "ERROR: install asciidoctor-pdf first!"
+        exit 1
+      }
+    fi
+  fi
+}
+
+# used to remove generated docs (HTML and/or PDF)
+_clean() {
+  rm -f index.{html,xml}
+  rm -f $pdf_name $xml_name
+}
+
+# used to build the main doc (HTML and/or PDF)
+_build() {
+  local result
+
+  asciidoctor index.adoc
+  result=$?
+
+  $generate_pdf || exit $result
+
+  if $use_fopub
+  then
+    asciidoctor -b docbook -d book -a data-uri! index.adoc -o $xml_name
+    $fopub $xml_name
+  else
+    asciidoctor-pdf -o $pdf_name index.adoc
+  fi
+}
+
+# used to publish the generated docs to GitHub Pages
+_publish() {
+  local published_dir=`mktemp -d`
+  local remote_repo=`git config --get remote.origin.url`
+  [ ".$remote_repo" = "." ] && {
+    echo 'The remote repository is not configured!'
+    return 1
+  }
+
+  mkdir -p "$published_dir/$RELATIVE_DIR"
+  rsync -av --delete \
+    --include='*.html' \
+    --include='*.pdf' \
+    --include='images/' \
+    --include='images/**' \
+    --exclude='*' \
+    . $published_dir/$RELATIVE_DIR/
+
+  local msg="Published at `date`"
+  cd "$published_dir"
+  git init
+  git add -A
+  git commit -m "$msg"
+  git push --force $remote_repo master:gh-pages
+  cd - &> /dev/null
+}
+
+check_prerequisites
+cd "$BASE_DIR"
+op=$1
+[ "$op" ] || op=build
+type _$op &> /dev/null || {
+  echo "Usage: `basename $0` [build]|<clean|publish>"
+  exit 1
+}
+_$op

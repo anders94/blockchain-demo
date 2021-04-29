@@ -1,0 +1,12 @@
+:PauloJeronimo: {uri-paulojeronimo}[Paulo Jerônimo]
+:AndersBrownworth: {uri-andersbrownworth}[Anders Brownworth]
+:blockchain4devs: {uri-blockchain4devs}[blockchain4devs]
+:blockchain-demo-src: {uri-blockchain4devs}/blockchain-demo
+:blockchain: Blockchain
+:rootdir: link:{uri-blockchain-demo-2}[blockchain-demo]
+:macOS: {uri-macOS}[macOS]
+
+ifdef::backend-html5[]
+:rootdir: ../..
+:blockchain: pass:[<b>Blockchain</b>]
+endif::[]

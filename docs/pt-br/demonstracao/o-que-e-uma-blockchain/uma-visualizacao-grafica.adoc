@@ -1,0 +1,41 @@
+[[uma-visualizacao-grafica]]
+= Uma visualização gráfica
+
+Finalmente, vamos à {uri-blockchain-demo-blockchain}[aba {blockchain}] para entender o que é esse conceito genial, numa visualização gráfica! 😃
+
+Nessa aba, apenas para fins de demonstração, apresentamos cinco (5) blocos encadeados.
+Observe que, agora, foi adicionado o campo `Prev`.
+Esse campo também é um `Hash`.
+No primeiro bloco, seu valor é nulo.
+Para todos os demais blocos, o campo `Prev` armazena o valor do `Hash` do bloco anterior.
+Assim, agora há um encademento que forma o que chamamos de "corrente de blocos".
+Ou, o nome bonito em inglês: {blockchain}.
+
+O objetivo desse encadeamento entre os blocos é muito simples.
+Se você fizer uma alteração em qualquer campo do bloco o seu `Hash` será alterado.
+Consequentemente, todos os blocos posteriores a essa alteração também não serão mais considerados válidos.
+O motivo para isso é que, a partir do momento em que é modificado o `Hash` de um bloco, o valor de `Prev`, registrado no bloco posterior, não coincidirá mais.
+Logo, uma {blockchain} considerará todos os blocos inválidos a partir de algum que tenha sido adulterado em qualquer um de seus campos.
+
+Para fazer uma {blockchain} adulterada ser novamente considerada válida, alguns passos seriam necessários.
+Por exemplo, vamos supor que estamos fazendo uma alteração de dados apenas no último bloco.
+Nesse caso, tornar a {blockchain} válida é algo simples: basta recalcular o `Hash` desse bloco executando a operação `Miner`.
+Ou seja, executar o processo de mineração.
+
+O problema real surge ao ser feita uma tentativa de alterar um bloco que não é o último!
+Vamos ver também que a dificuldade de se alterar um bloco é gradativamente aumentada quando ele vai se aproximando do primeiro bloco (ou se distanciando do último).
+Suponhamos, por exemplo, que alguém tentasse fazer a adulteração de um dado no bloco 3.
+Para que isso fosse possível, a operação de mineração para todos deveria ser novamente realizada a partir desse bloco.
+Assim, o custo de tornar um bloco válido vai aumentando exponencialmente a medida em que ele se aproxima do primeiro bloco.
+
+Podemos observar, então, que uma {blockchain} é uma estrutura (ou um banco) de dados que rejeita modificações que não sejam no último bloco.
+Poderíamos fazer uma comparação com um livro onde só é possível se escrever na última página.
+E, continuando nessa linha, esse livro só poderia ser escrito a caneta.
+Por fim, qualquer tentativa de se modificar um dado registrado nesse livro o deixaria manchado (ou rasurado) para sempre.
+
+Uma {blockchain} é citada por muitos como sendo "o protocolo da confiança".
+Um dos motivos é decorrente do fato de somente ser possível se adicionar informações.
+Não são permitidas alterações de informação, pois, pelo que vimos, a rede rejeita mudanças através de seu protocolo.
+Finalmente, é importante entender que uma {blockchain} é uma estrutura de dados que fica "na mão de muitos".
+Ou seja, é descentralizada.
+Vamos agora entender como uma {blockchain} é considerada ainda mais segura quando ela é distribuída entre vários nós de uma rede.
