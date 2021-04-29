@@ -12,4 +12,4 @@ RUN        npm install
 
 COPY       . /blockchain-demo 
 
-CMD        ["bin/www"]
+CMD        ["node", "bin/www"]
