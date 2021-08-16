@@ -102,8 +102,4 @@ That one block would take this software approximately 8,454,989,768,407,765 year
 The 2nd part of the 101 session:
 * https://github.com/anders94/public-private-key-demo
 
-## Send Thanks
 
-![](public/images/qr.png)
-
-Bitcoin gratefully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
