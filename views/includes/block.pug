@@ -6,17 +6,17 @@
       .col-sm-10
         .input-group
           span.input-group-addon #
-          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block onchange='updateChain('+block.block+', '+block.chain+');' onkeyup='updateChain('+block.block+', '+block.chain+');')
+          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block)
 
     .form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'nonce') #{__('Nonce')}:
       .col-sm-10
-         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, onkeyup='updateChain('+block.block+', '+block.chain+');')
+         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce)
 
     .form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'data') #{__('Data')}:
       .col-sm-10
-        textarea.form-control(id='block'+block.block+'chain'+block.chain+'data', rows='10', onkeyup='updateChain('+block.block+', '+block.chain+');')
+        textarea.form-control(id='block'+block.block+'chain'+block.chain+'data', rows='10')
 
     #state.form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'previous') #{__('Prev')}:

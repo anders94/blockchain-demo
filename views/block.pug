@@ -11,17 +11,17 @@ block content
           .col-sm-10
             .input-group
               span.input-group-addon #
-              input#block1chain1number.form-control(type='number', value='1' onchange='updateHash(1, 1);' onkeyup='updateHash(1, 1);')
+              input#block1chain1number.form-control(type='number', value='1')
 
         .form-group
           label.col-sm-2.control-label(for='block1chain1nonce') #{__('Nonce')}:
           .col-sm-10
-             input#block1chain1nonce.form-control(type='text', value='72608', onkeyup='updateHash(1, 1);')
+             input#block1chain1nonce.form-control(type='text', value='72608')
 
         .form-group
           label.col-sm-2.control-label(for='block1chain1data') #{__('Data')}:
           .col-sm-10
-            textarea#block1chain1data.form-control(rows='10', onkeyup='updateHash(1, 1);')
+            textarea#block1chain1data.form-control(rows='10')
 
         #state.form-group
           label.col-sm-2.control-label(for='block1chain1hash') #{__('Hash')}:
@@ -37,6 +37,9 @@ block content
 
   script.
     $(function() {
+      $('#block1chain1number').bind('input propertychange', function() { updateHash(1, 1); });
+      $('#block1chain1nonce').bind('input propertychange', function() { updateHash(1, 1); });
+      $('#block1chain1data').bind('input propertychange', function() { updateHash(1, 1); });
       mineButtonAnimation(1, 1);
       updateHash(1, 1);
     });
