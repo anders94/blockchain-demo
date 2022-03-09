@@ -10,7 +10,7 @@ block content
         .form-group
           label.col-sm-2.control-label(for='data') #{__('Data')}:
           .col-sm-10
-            textarea#data.form-control(rows='10', onkeyup='$("#hash").val(sha256())')
+            textarea#data.form-control(rows='10')
 
         .form-group
           label.col-sm-2.control-label(for='hash') #{__('Hash')}:
@@ -22,4 +22,10 @@ block content
       return $('#data').val();
     }
 
-    $("#hash").val(sha256());
+    $(function() {
+      $('#data').bind('input propertychange', function() {
+        $('#hash').val(sha256());
+      });
+    });
+
+    $('#hash').val(sha256());

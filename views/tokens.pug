@@ -52,6 +52,13 @@ block content
 
     function setup(block, chain) {
       updateHash(block, chain);
+      $('#block'+block+'chain'+chain+'number').bind('input propertychange', function() { updateChain(block, chain); });
+      $('#block'+block+'chain'+chain+'nonce').bind('input propertychange', function() { updateChain(block, chain); });
+      for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+        $('#block'+block+'chain'+chain+'tx'+x+'value').bind('input propertychange', function() { updateChain(block, chain); });
+        $('#block'+block+'chain'+chain+'tx'+x+'from').bind('input propertychange', function() { updateChain(block, chain); });
+        $('#block'+block+'chain'+chain+'tx'+x+'to').bind('input propertychange', function() { updateChain(block, chain); });
+      }
       $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
           e.preventDefault();
           var l = Ladda.create(this);

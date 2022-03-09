@@ -6,12 +6,12 @@
       .col-sm-10
         .input-group
           span.input-group-addon #
-          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block onchange='updateChain('+block.block+', '+block.chain+');' onkeyup='updateChain('+block.block+', '+block.chain+');')
+          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block)
 
     .form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'nonce') #{__('Nonce')}:
       .col-sm-10
-         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, onkeyup='updateChain('+block.block+', '+block.chain+');')
+         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce)
 
     .form-group
       label.col-sm-2.control-label #{__('Tx')}:
@@ -19,11 +19,11 @@
         each tx, x in block.txs
           .input-group
             .input-group-addon #{__('$')}
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'value', type='text', value=tx.value, onkeyup='updateChain('+block.block+', '+block.chain+');')
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'value', type='text', value=tx.value)
             .input-group-addon #{__('From')}:
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'from', type='text', value=tx.from, onkeyup='updateChain('+block.block+', '+block.chain+');')
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'from', type='text', value=tx.from)
             .input-group-addon -&gt;
-            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'to', type='text', value=tx.to, onkeyup='updateChain('+block.block+', '+block.chain+');')
+            input.form-control(id='block'+block.block+'chain'+block.chain+'tx'+x+'to', type='text', value=tx.to)
 
     #state.form-group
       label.col-sm-2.control-label(for='block'+block.block+'chain'+block.chain+'previous') #{__('Prev')}:

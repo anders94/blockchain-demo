@@ -47,6 +47,9 @@ block content
 
     function setup(block, chain) {
       updateHash(block, chain);
+      $('#block'+block+'chain'+chain+'number').bind('input propertychange', function() { updateChain(block, chain); });
+      $('#block'+block+'chain'+chain+'nonce').bind('input propertychange', function() { updateChain(block, chain); });
+      $('#block'+block+'chain'+chain+'data').bind('input propertychange', function() { updateChain(block, chain); });
       $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
           e.preventDefault();
           var l = Ladda.create(this);
