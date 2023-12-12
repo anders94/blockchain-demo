@@ -59,7 +59,5 @@ i18n.configure({
   locales:['en', 'de', 'es', 'fr-CA', 'hi', 'ja', 'ko', 'nl', 'pl', 'pt', 'zh-CN', 'hu', 'id'],
   directory: __dirname + '/locales'
 });
-//ignore the following changes it just for practicing the fork pull request
-var ignore = "just ignore"
 
 module.exports = app;
