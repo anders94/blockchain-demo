@@ -1,0 +1,41 @@
+[[tokens]]
+= Tokens
+
+Na {uri-blockchain-demo-tokens}[aba Tokens] visualizamos uma das possíveis aplicações da {blockchain}.
+Ela pode ser utilizada para um sistema financeiro.
+Em essência, <<a-origem-da-blockchain,como já citado>>, a origem da {blockchain} foi para tornar possível a existência do {uri-bitcoin-paper}[Bitcoin].
+Em inglês, o termo https://www.google.com.br/search?q=what+is+a+token[token] é dado para uma coisa que esteja servindo como uma representação visível ou tangível de um fato, qualidade, sentimento, etc.
+Dessa forma o campo `Data` numa {blockchain} pode representar um `token` que, nesse contexto, significa um registro de várias transações.
+Cada transação, por sua vez, registra que pessoa está enviando uma quantia (em moeda icon:dollar[]) para outra pessoa.
+
+Como já vimos, o registro de dados numa {blockchain} é imutável.
+Logo, se esses dados forem transações, elas também serão imutáveis.
+E, num registro dessa espécie, é essencial essa imutabilidade pois nenhuma pessoa de boa fé gostaria de ver transações sendo adulteradas.
+A {blockchain} resolve isso.
+Se tentarmos fazer uma alteração nos dados de qualquer transação poderemos notar que o bloco será invalidado.
+
+Nessa demonstração, as transações são representadas de forma muito simplificada.
+Basicamente, cada transação possui apenas três (3) campos: quem está enviando um valor, quem está recebendo e, por fim, o valor.
+Fundamentalmente, para um sistema de transações, essas são as três informações chave.
+É muito importante que saibamos de onde uma quantia saiu e para onde ela foi.
+
+É claro que apenas essas três informações não são suficientes para se contruir um sistema realmente utilizável.
+Afinal, as pessoas querem privacidade e anonimato por razões óbvia (de segurança).
+Ninguém utilizaria um sistema, como esse, onde estão públicas as informações do nome da pessoa e dos valores que ela movimenta.
+Então, num sistema como o Bitcoin, ao invés de utilizarmos nomes, utilizamos endereços.
+
+Da mesma forma que não queremos adulterações nos dados, devemos evitar outras possibilidades de fraudes.
+Há um tipo de fraude que não seria possível de ser verificada numa {blockchain} implementada da forma como estamos fazendo agora.
+Essa fraude seria uma pessoa tentar "gastar" o mesmo diheiro duas vezes.
+Isso é conhecido como "gasto duplo".
+
+Exemplificando a possibilidade de gasto duplo através de um passo a passo:
+
+. Darcy tem 25 dólares e quer comprar algo de Bingley.
+. Ela passa seus 25 dólares para o Bingley.
+. Utilizando essa {blockchain}, ela também tenta comprar algo de Jane, gastando mais 25 dólares.
+. O problema: será que Darcy tinha, realmente, 50 dólares?
+Ou será que ela está tentando gastar os mesmos 25 dólares que já possuia?
+Como nessa {blockchain} não há o registro do saldo anterior de Darcy, isso poderia ser possível. Concorda?
+
+Então, claramente, essa {blockchain} precisa ser evoluída.

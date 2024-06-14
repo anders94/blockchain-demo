@@ -1,0 +1,46 @@
+[[coinbase-transactions]]
+= Transações Gênese
+
+Como vimos uma {blockchain} voltada ao controle de transações precisa manter um registro imutável dessas transações.
+Mas, além disso, em se tratando de transações, é essencial conseguirmos verificar se elas realmente são válidas.
+Num sistema financeiro, para que uma pessoa possa gastar algum dinheiro, ela precisa ter saldo, óbvio.
+Então, esse dinheiro deve ter vindo de alguém que, por sua vez, recebeu de outro alguém e assim suscessivamente.
+Voltando no tempo dessa forma, chegaremos até o ponto em que o dinheiro surgiu.
+
+Poderíamos nos imaginar na figura de mineradores reais.
+Encontrando uma mina de ouro, utilizaríamos parte do ouro que minerássesmos para trocá-lo por coisas.
+Devemos nos lembrar que toda mina de ouro é finita.
+A moeda (o ouro nesse caso) é simplesmente algo que utilizamos para facilitar uma troca por algo que queremos.
+As pessoas que recebem esse ouro, por sua vez, poderiam dividí-lo em porções ainda menores para comprar coisas de outras pessoas.
+O Bitcoin funciona exatamente assim, como o ouro.
+
+Vamos fazer uma representação sistêmica desse processo.
+Para entender como surge o dinheiro numa {blockchain}, precisamos definir o {uri-coinbase-transaction}[conceito de transação gênese] (ou transação coinbase).
+
+Nessa demonstração, {AndersBrownworth} é o "descobridor de uma mina".
+Sendo assim, a primeira coisa que ele faz é criar para si um {uri-genesis-block}[bloco gênese], de identificador 1.
+Esse bloco não contém nenhuma transação além de uma, especial, chamada de `Coinbase`.
+Essa transação especial é de "ninguém" para a pessoa que criou o bloco, no caso, um minerador.
+Nessa {blockchain}, Anders resolve se dar 100 dólares no primeiro bloco (1).
+
+[NOTE]
+====
+* O {uri-blockchain-genesis-block}[bloco gênese na Blockchain do Bitcoin], criada por {uri-satoshi-nakamoto}[Satoshi Nakamoto] tem o identificador 0.
+* No caso do Bitcoin, o valor de {uri-coinbase}[Coinbase] foi de 50 BTC quando a rede foi criada.
+Em seguida, caiu para 25 e, no ano passado, foi para 12.5 BTC. Esse valor sempre decairá.
+* No Bitcoin, o valor de `Coinbase` é um valor que é reivindicado por um minerador como prêmio pela mineração do bloco.
+====
+
+No bloco 2, existem transações.
+O importante nessa implementação de {blockchain} é que, agora, dá pra saber se uma transação é válida.
+Vejamos como.
+
+No bloco 4, por exemplo, Sophia transfere para Jackson, 8 dólares.
+Será que Sophia realmente tinha 8 dólares?
+Para saber isso, vamos ao bloco anterior (3).
+Sophia não teve transações nesse bloco.
+Vamos ao anterior novamente (2).
+Nesse bloco, Sophia recebeu, de Anders, 10 dólares.
+Então, sem dúvida, Sophia pode gastar esse dinheiro.
+
+Portanto, com essa nova implementação de {blockchain}, agora conseguimos verificar se uma transação é válida.
