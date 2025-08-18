@@ -1,0 +1,10 @@
+[[instalacao]]
+= Instalação local
+
+:leveloffset: +1
+
+include::instalacao-direta.adoc[]
+
+include::instalacao-via-docker.adoc[]
+
+:leveloffset: -1
