@@ -37,6 +37,10 @@ input {
   background: rgb(250, 220, 220);
 }
 
+.well-balance-error {
+  background: rgb(230, 210, 250);
+}
+
 .github-ribbon {
   position: absolute;
   top: 0;

@@ -53,6 +53,63 @@ block content
       return s;
     }
 
+    // Calculate account balances up to a specific block
+    function calculateBalances(upToBlock, chain) {
+      var balances = {};
+      
+      // Process each block up to the specified block
+      for (var b = 1; b <= upToBlock; b++) {
+        // Add coinbase reward
+        var coinbaseTo = $('#block'+b+'chain'+chain+'coinbaseto').val();
+        var coinbaseValue = parseFloat($('#block'+b+'chain'+chain+'coinbasevalue').val()) || 0;
+        
+        if (coinbaseTo) {
+          balances[coinbaseTo] = (balances[coinbaseTo] || 0) + coinbaseValue;
+        }
+        
+        // Process transactions
+        for (var x = 0; $('#block'+b+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+          var txValue = parseFloat($('#block'+b+'chain'+chain+'tx'+x+'value').val()) || 0;
+          var txFrom = $('#block'+b+'chain'+chain+'tx'+x+'from').val();
+          var txTo = $('#block'+b+'chain'+chain+'tx'+x+'to').val();
+          
+          if (txFrom && txTo && txValue > 0) {
+            balances[txFrom] = (balances[txFrom] || 0) - txValue;
+            balances[txTo] = (balances[txTo] || 0) + txValue;
+          }
+        }
+      }
+      
+      return balances;
+    }
+
+    // Check if all transactions in a block have sufficient balance
+    function validateBlockBalances(block, chain) {
+      if (block === 1) {
+        return true; // First block (genesis) is always valid
+      }
+      
+      // Calculate balances up to the previous block
+      var balances = calculateBalances(block - 1, chain);
+      
+      // Check each transaction in current block
+      for (var x = 0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+        var txValue = parseFloat($('#block'+block+'chain'+chain+'tx'+x+'value').val()) || 0;
+        var txFrom = $('#block'+block+'chain'+chain+'tx'+x+'from').val();
+        
+        if (txFrom && txValue > 0) {
+          var currentBalance = balances[txFrom] || 0;
+          if (currentBalance < txValue) {
+            return false; // Insufficient balance
+          }
+          // Deduct this transaction for checking subsequent transactions
+          balances[txFrom] = currentBalance - txValue;
+        }
+      }
+      
+      return true;
+    }
+
     function setup(block, chain) {
       updateHash(block, chain);
       $('#block'+block+'chain'+chain+'number').bind('input propertychange', function() { updateChain(block, chain); });

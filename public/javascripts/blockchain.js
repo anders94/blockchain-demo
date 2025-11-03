@@ -43,12 +43,29 @@ function sha256(block, chain) {
 }
 
 function updateState(block, chain) {
-  // set the well background red or green for this block
-  if ($('#block'+block+'chain'+chain+'hash').val().substr(0, patternLen) <= pattern) {
-      $('#block'+block+'chain'+chain+'well').removeClass('well-error').addClass('well-success');
+  // set the well background red, green, or purple for this block
+  var hashValid = $('#block'+block+'chain'+chain+'hash').val().substr(0, patternLen) <= pattern;
+  var balanceValid = true;
+  
+  // Check if balance validation function exists (only in coinbase page)
+  if (typeof validateBlockBalances === 'function') {
+    balanceValid = validateBlockBalances(block, chain);
+  }
+  
+  // Remove all state classes first
+  $('#block'+block+'chain'+chain+'well').removeClass('well-error well-success well-balance-error');
+  
+  if (!balanceValid) {
+    // Purple for insufficient balance
+    $('#block'+block+'chain'+chain+'well').addClass('well-balance-error');
+  }
+  else if (hashValid) {
+    // Green for valid hash and sufficient balance
+    $('#block'+block+'chain'+chain+'well').addClass('well-success');
   }
   else {
-      $('#block'+block+'chain'+chain+'well').removeClass('well-success').addClass('well-error');
+    // Red for invalid hash
+    $('#block'+block+'chain'+chain+'well').addClass('well-error');
   }
 }
 
