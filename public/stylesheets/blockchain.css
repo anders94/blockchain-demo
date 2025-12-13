@@ -44,3 +44,128 @@ input {
   border: 0;
   z-index: 20000;
 }
+
+/*
+Custom design by DaWe (I hope won't be worse than was LOL)
+Used color palette: https://tailwindcss.com/docs/customizing-colors/
+ */
+
+body .navbar {
+  background-image: none;
+  background-color: #CBD5E0;
+  padding-top: 10px;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+  color: #1A202C;
+  text-shadow: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a {
+  background-image: linear-gradient(to bottom right, #718096, #4A5568);
+  color: #F7FAFC;
+  border-radius: 3px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-image: linear-gradient(to bottom right, #E2E8F0, #CBD5E0);
+  color: #1A202C;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-brand:hover {
+  border-radius: 3px;
+  color: #1A202C;
+}
+
+.navbar-brand {
+  height: auto;
+}
+
+.well {
+  background-color: #E2E8F0;
+  background-image: none;
+  border: none;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important
+}
+
+.well-success {
+  background: rgb(218, 243, 220);
+}
+
+.well-error {
+  background: rgb(245, 219, 219);
+}
+
+.form-control {
+  border: none;
+}
+
+body {
+  background-color: #F7FAFC;
+}
+
+.input-group-addon {
+  background-color: #EDF2F7;
+  border: 1px solid #EDF2F7;
+}
+
+.form-control[disabled], fieldset[disabled] .form-control {
+  background-color: #E2E8F0;
+}
+
+.form-control[readonly] {
+  background-color: #EDF2F7;
+}
+
+
+.btn-primary {
+  background-image: linear-gradient(to bottom right, #2C5282, #2A4365);
+  border: none;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+  background-color: #265a88;
+  background-position: 0 -30px;
+}
+
+h1 {
+  color: #4A5568;
+  text-align: center;
+
+}
+
+h3 {
+  color: #1A202C;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #2D3748;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #2D3748;
+}
+
+
+/* FIX Fork me on Github logo on small screens */
+
+@media only screen and (max-width: 1380px) {
+  .github-ribbon {
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 828px) {
+  .github-ribbon {
+    display: none;
+  }
+}
+
+.index-video {
+  max-width: 800px;
+  margin: auto;
+}
