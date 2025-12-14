@@ -1,0 +1,7 @@
+#!/bin/bash
+
+generate_pdf=${generate_pdf:-true}
+use_fopub=${use_fopub:-false}
+pdf_name=${pdf_name:-blockchain-demo.pdf}
+xml_name=${pdf_name%.pdf}.xml
+fopub=${fopub:-~/Projects/github.com/asciidoctor/asciidoctor-fopub/bin/fopub}

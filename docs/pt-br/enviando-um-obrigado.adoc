@@ -1,0 +1,14 @@
+[[enviando-um-obrigado]]
+= Enviando um obrigado
+
+Se você gostou deste projeto, incluindo seu texto e vídeos, e deseja enviar um "obrigado", saiba que Bitcoin e Ethereum são, agradecidamente, aceitos por seus desenvolvedores nos seguintes endereços:
+
+* {uri-andersbrownworth}[Anders Brownworth] (desenvolvedor/criador deste projeto):
+** Bitcoin (BTC): `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`
+* {uri-paulojeronimo}[Paulo Jerônimo] (desenvolvedor/criador deste documento e de vídeos em português)
+** Bitcoin (BTC): `1LTrDUdUw2zCS7LE93hDuvYiG326VnxL6k`
+** Ether (ETH): `0xc8780E07eE3C0f058315a20D2fD7dE6d2505f7a3`
+
+Claramente, parte do valor depositado será revertido em melhorias neste projeto.
+
+include::todo.adoc[leveloffset=+1]

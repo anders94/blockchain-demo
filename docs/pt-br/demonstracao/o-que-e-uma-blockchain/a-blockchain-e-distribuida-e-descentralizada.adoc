@@ -1,0 +1,30 @@
+[[a-blockchain-e-distribuida-e-descentralizada]]
+= A Blockchain é distribuída e descentralizada
+
+Vimos que uma {blockchain} é uma estrutura de dados confiável que só aceita inserções de dados.
+Ou seja, ela é resistente a mudanças.
+Mas, além disso, uma {blockchain} é também uma rede de computadores onde essa estrutura de dados é replicada.
+Dessa forma, sua estrutura de dados existe, distribuída, em cada um dos computadores (nós) dessa rede.
+
+O objetivo principal da distribuição de uma {blockchain} entre vários nós é impedir que mesmo sendo ela válida num único nó, ela só seja totalmente válida quando houver um {uri-consenso}[consenso] (na rede) de que suas informações também são válidas em todos os outros nós.
+Numa {blockchain}, os nós pertencentes a sua rede são responsáveis por validar dados e retransmití-los de forma que eles sejam replicados em todos os nós.
+Mais especificamente, quando dados precisam ser inseridos num bloco, todos os nós devem verificar se esses dados são válidos.
+Caso não sejam, esses dados serão descartados e não retransmitidos aos próximos nós.
+
+A validação de dados, obviamente, depende do que são esses dados.
+A primeira {blockchain} foi construída para resolver um problema complexo: a tranferência de valores.
+Dando crédito: [[a-origem-da-blockchain]]*os conceitos de {blockchain} que estamos aprendendo surgiram para fazer a moeda digital {uri-bitcoin}[Bitcoin] entrar em funcionamento*.
+Perceba que só agora estamos falando de uma das várias possibilidades de aplicação da {blockchain}.
+Apresentaremos, ainda, vários outros casos de uso de uma {blockchain}.
+
+O que diferencia a solução da {blockchain}, dada para o Bitcoin, de soluções bancárias tradicionais que resolvem esse problema, entretanto, é a descentralização.
+Detalharemos mais sobre transações, logo a frente.
+Mas, por enquanto, é importante saber que uma {blockchain}, por ser descentralizada, precisa criar algoritmos que promovam a manutenção de um consenso entre os nós.
+
+É através de consenso que uma {blockchain} identifica se uma cópia de seus dados, que está num nó, é realmente válida ou não.
+Acessando a {uri-blockchain-demo-distributed}[aba Distributed] podemos identificar que a alteração de uma das cópias da {blockchain} num dos nós é possível de ser realizada.
+E, essa alteração pode, com certeza, tornar a cópia da {blockchain} válida nesse nó.
+Como vimos, para isso ocorrer, seria necessário refazer os cálculos de `Hash` para cada bloco a partir do que for modificado.
+Mas, caso isso ocorra, outros nós da rede percebem a diferença e, automaticamente, eliminam a participação do nó que possui a {blockchain} adulterada.
+Isso é feito através de consenso.
+A rede que está certa é a rede que detém a maioria do consenso (51%).
