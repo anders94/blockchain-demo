@@ -36,6 +36,10 @@ block content
       setup(3, 3);
       setup(4, 3);
       setup(5, 3);
+
+      updateBalances(1);
+      updateBalances(2);
+      updateBalances(3);
     });
 
     function getText(block, chain) {
@@ -53,16 +57,60 @@ block content
       return s;
     }
 
+    function toCents(value) {
+      // parse a dollar amount into whole cents so we avoid floating point drift
+      return Math.round(parseFloat(value) * 100) || 0;
+    }
+
+    function checkAmount(field) {
+      // every amount must be greater than zero; anything else is painted red
+      // and ignored when tallying balances
+      var value = toCents(field.val());
+      if (value > 0) {
+        field.removeClass('invalid-amount');
+        return value;
+      }
+      field.addClass('invalid-amount');
+      return 0;
+    }
+
+    function updateBalances(chain) {
+      // walk the chain forward in time keeping a running balance for every name
+      // that receives money, e.g. as of block 2:
+      //   {Anders: 140, Sophia: 10, Lucas: 20, Emily: 15, Madison: 15}
+      // any transaction that pushes its sender below zero gets its name painted red
+      var balances = {};
+      for (var block = 1; block <= 5; block++) {
+        var coinbaseTo = $('#block'+block+'chain'+chain+'coinbaseto').val();
+        balances[coinbaseTo] = (balances[coinbaseTo] || 0) +
+                               checkAmount($('#block'+block+'chain'+chain+'coinbasevalue'));
+
+        for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
+          var value = checkAmount($('#block'+block+'chain'+chain+'tx'+x+'value'));
+          var from = $('#block'+block+'chain'+chain+'tx'+x+'from').val();
+          var to = $('#block'+block+'chain'+chain+'tx'+x+'to').val();
+          balances[from] = (balances[from] || 0) - value;
+          balances[to] = (balances[to] || 0) + value;
+          if (balances[from] < 0) {
+            $('#block'+block+'chain'+chain+'tx'+x+'from').addClass('insufficient-funds');
+          }
+          else {
+            $('#block'+block+'chain'+chain+'tx'+x+'from').removeClass('insufficient-funds');
+          }
+        }
+      }
+    }
+
     function setup(block, chain) {
       updateHash(block, chain);
       $('#block'+block+'chain'+chain+'number').bind('input propertychange', function() { updateChain(block, chain); });
       $('#block'+block+'chain'+chain+'nonce').bind('input propertychange', function() { updateChain(block, chain); });
-      $('#block'+block+'chain'+chain+'coinbasevalue').bind('input propertychange', function() { updateChain(block, chain); });
-      $('#block'+block+'chain'+chain+'coinbaseto').bind('input propertychange', function() { updateChain(block, chain); });
+      $('#block'+block+'chain'+chain+'coinbasevalue').bind('input propertychange', function() { updateChain(block, chain); updateBalances(chain); });
+      $('#block'+block+'chain'+chain+'coinbaseto').bind('input propertychange', function() { updateChain(block, chain); updateBalances(chain); });
       for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
-        $('#block'+block+'chain'+chain+'tx'+x+'value').bind('input propertychange', function() { updateChain(block, chain); });
-        $('#block'+block+'chain'+chain+'tx'+x+'from').bind('input propertychange', function() { updateChain(block, chain); });
-        $('#block'+block+'chain'+chain+'tx'+x+'to').bind('input propertychange', function() { updateChain(block, chain); });
+        $('#block'+block+'chain'+chain+'tx'+x+'value').bind('input propertychange', function() { updateChain(block, chain); updateBalances(chain); });
+        $('#block'+block+'chain'+chain+'tx'+x+'from').bind('input propertychange', function() { updateChain(block, chain); updateBalances(chain); });
+        $('#block'+block+'chain'+chain+'tx'+x+'to').bind('input propertychange', function() { updateChain(block, chain); updateBalances(chain); });
       }
       $('#block'+block+'chain'+chain+'mineButton').click(function(e) {
           e.preventDefault();

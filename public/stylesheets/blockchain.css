@@ -37,6 +37,14 @@ input {
   background: rgb(250, 220, 220);
 }
 
+/* a transaction sender who is spending money they don't have,
+   or an amount that isn't greater than zero */
+.insufficient-funds, .invalid-amount {
+  color: rgb(169, 68, 66);
+  border-color: rgb(169, 68, 66);
+  background: rgb(250, 220, 220);
+}
+
 .github-ribbon {
   position: absolute;
   top: 0;
