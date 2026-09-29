@@ -1,0 +1,16 @@
+[[melhorias-que-voce-pode-aguardar]]
+= Melhorias que você pode aguardar neste projeto
+
+Para o {uri-blockchain-demo-2-src}[fork] do {uri-blockchain-demo-src}[projeto original] são esperadas as seguintes evoluções:
+
+. Criação de legendas (_closed captions_) em inglês para os vídeos disponibibilizados em português (pt-br).
+. Internacionalização da aplicação para português.
+. Adição de uma cópia da aplicação (em execução) no endereço {uri-blockchain-demo-2}.
+.. Geração de um site estático (para publicação no endereço acima sem a necessidade de um servidor executando o Node.js).
+... Substituição do gerenciador de pacotes (de {uri-npm}[npm] p/ {uri-yarn}[yarn]).
+... Utilização do {uri-gulp}[Gulp] para a construção desse site estático.
+... Substituição da camada de visualização (de {uri-jade}[Jade] p/ {uri-pug}[Pug]).
+. Alteração da página principal da aplicação, para que ela também apresente links para a visualização dos vídeos em português.
+. Criação de https://en.wikipedia.org/wiki/QR_code[QR Code] para os endereços (de Bitcoin e/ou Ethereum) publicados neste documento.
+
+Por fim, espera-se que as adições realizadas neste fork sejam aceitas e incorporadas ao {uri-blockchain-demo-src}[projeto original].

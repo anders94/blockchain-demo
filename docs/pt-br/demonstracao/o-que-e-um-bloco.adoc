@@ -1,0 +1,34 @@
+[[o-que-e-um-bloco]]
+= O que é um Bloco?
+
+Vamos agora para a {uri-blockchain-demo-block}[aba Block].
+Adicionaremos, acima do campo `Data` aprensentado na aba `Hash`, dois outros campos: `Block` e `Nonce`.
+Eles serão explicados agora.
+Também vamos criar um botão `Miner` e explicar qual será sua utilidade.
+Com a adição desses novos elementos, estamos criando o que chamaremos de *Bloco*.
+
+Um bloco, então, tem um número identificador (`Block`), um `Nonce`, e pode ser "minerado" quado clicarmos no botão `Miner`.
+Também notemos que o campo `Hash` agora possui um valor interessante, iniciado por quatro zeros ("0000").
+Esse valor de `Hash` é bastante singular.
+Ele é criado através de uma *regra que é utilizada para verificar se o bloco é válido*.
+Nesse nosso caso, a regra é bem simples: o valor do `Hash`, calculado em função do valor inserido em `Data` (e dos outros campos), precisará começar com esses quatro zeros.
+
+Para encontar um `Hash` que safisfaça essa regra, após inserir os dados que desejamos no campo `Data`, iremos alterar o valor de `Nonce`.
+O número identificador do bloco (`Block`) será gerado automaticamente (apesar de podermos modificá-lo, para testes, nesse exemplo).
+Esse cáculo do `Hash` será repetidamente refeito, até encontarmos um `Hash` que comece com esses quatro zeros.
+
+Você pode notar também que, qualquer mudança nos campos (`Block`, `Nonce` e `Data`) altera o valor de `Hash`.
+
+Manualmente, poderíamos ficar tentando modificar o valor de `Nonce` até encontarmos a solução para esse problema.
+Mas, fazendo isso, poderemos passar vários minutos ou horas (ou mesmo dias) em tentativas.
+Então, o botão `Miner` servirá para realizar essa tarefa pra nós.
+
+A atividade de {uri-mining}["mineração"], então, é nesse nosso caso uma tarefa que será executada pelo computador.
+Ela será realizada em função do valor de todos os campos e buscará um `Hash` que atenda a regra estabelecida: começar com quatro zeros.
+Essa regra também é conhecida por "desafio matemático".
+Você pode notar que esse desafio (no nosso caso e em várias outras formas de propô-lo) não é uma função complexa.
+Por outro lado, ela é onerosa pois pode cosumir muito tempo de processamento.
+O trabalho de "mineração" realizado dessa forma é também conhecido por {uri-proof-of-work}["Proof of Work"].
+
+Após um bloco ser "minerado", a conferência de sua validade é algo extremamente simples e rápido.
+Essa conferência é apenas o cálculo do `Hash` de todos os campos (`Block` + `Nonce` + `Data`) e a obediência a regra estabelecida (em nosso caso, um `Hash` começando com quatro zeros iniciais).
