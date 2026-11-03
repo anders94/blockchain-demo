@@ -73,13 +73,13 @@ function mine(block, chain, isChain) {
     $('#block'+block+'chain'+chain+'nonce').val(x);
     $('#block'+block+'chain'+chain+'hash').val(sha256(block, chain));
     if ($('#block'+block+'chain'+chain+'hash').val().substr(0, patternLen) <= pattern) {
-      if (isChain) {
-        updateChain(block, chain);
-      }
-      else {
-        updateState(block, chain);
-      }
       break;
     }
+  }
+  if (isChain) {
+    updateChain(block, chain);
+  }
+  else {
+    updateState(block, chain);
   }
 }
