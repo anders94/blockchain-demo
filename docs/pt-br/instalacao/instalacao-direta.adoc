@@ -1,0 +1,29 @@
+[[instalacao-direta]]
+= Direta, utilizando o teu próprio sistema operacional (SO)
+
+Baixe o código:
+
+[source,bash,subs="attributes"]
+----
+git clone {uri-blockchain-demo-src}
+----
+
+Para rodar essa aplicação, você deverá ter instalado o {uri-nodejs}[Node.js]. Em seguida, instale as dependências dessa aplicação através do {uri-npm}[npm].
+
+[NOTE]
+====
+A instalação do comando npm pode ser executada, no {macOS}, através de um único comando: `brew install npm`. Isso é tudo que é necessário fazer neste sistema operacional.
+====
+
+----
+cd blockchain-demo
+npm install
+----
+
+Execute o servidor:
+
+----
+./bin/www
+----
+
+Abra o teu browser e acesse a URL da página de demonstração: http://localhost:3000.

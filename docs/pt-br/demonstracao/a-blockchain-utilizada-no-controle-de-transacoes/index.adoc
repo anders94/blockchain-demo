@@ -1,0 +1,10 @@
+[[a-blockchain-utilizada-no-controle-de-transacoes]]
+= A Blockchain utilizada no controle de transações icon:dollar[]
+
+:leveloffset: +1
+
+include::tokens.adoc[]
+
+include::coinbase-transactions.adoc[]
+
+:leveloffset: -1

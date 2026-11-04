@@ -1,0 +1,67 @@
+[[o-que-e-um-hash]]
+= O que é um Hash?
+
+Hashes são parte de várias informações armazenadas na {blockchain} e são essenciais para garantir sua segurança.
+
+Matematicamente falando, uma {uri-funcao-hash}[função hash] é um algoritmo que mapeia dados de comprimento variável para dados de comprimento fixo.
+Os valores retornados por uma função hash são chamados valores hash, códigos hash, somas hash, checksums ou, simplesmente, hashes.
+
+Nessa demonstração, a {uri-blockchain-demo-hash}[aba Hash] possibilita a entrada de uma informação de tamanho qualquer (no campo `Data`) e produz um `Hash` de tamanho fixo.
+A função SHA256 é uma das variantes do {uri-sha-2}[SHA-2] e utilizada para gerar esse código hash.
+Esse código é geralmente representado por uma string de 64 caracteres hexadecimais (de "0" a "9" e de "a" a "f").
+Obviamente, além dessa função, existem várias outras que poderiam ser utilizadas para gerar uma string de tamanho fixo a partir de uma quantidade de dados variáveis.
+Outros exemplos de funções (dentre várias) são o MD5 e o SHA-1.
+
+Ao se gerar um hash, espera-se que a cadeia fixa produzida a partir de um conjunto de informações tenha sempre um valor diferente para outro conjunto de entrada.
+Se o hash gerado num conjunto de dados for igual ao de outro, ocorre o que chamamos de colisão.
+Quanto menos colisões houverem ao se gerar um hash para um conjunto de informações diferentes, melhor o algoritmo de Hash.
+
+Foram necessários 20 anos para que fosse {uri-announcing-first-sha1-collision}[anunciada a primeira colisão de hash para a função SHA-1].
+Isso quer dizer que esse algoritmo foi considerado seguro e utilizado por todo esse espaço de tempo, sem problemas.
+O site {uri-shattered} demonstra que, para se proferir um ataque onde se tentaria obter um hash igual para um `input` diferente utilizando o algoritmo SHA-1, seriam necessárias 9.223.372.036.854.775.808 de execuções do algoritmo.
+Ou seja, um número monstruoso de compressões.
+Para ser realizado esse número de compressões, seriam necessários 6.500 anos de processamento de uma CPU comum (ou 110 anos de uma GPU).
+
+Uma colisão de SHA-1 pode ser visualizada, como na execução/resultado dos comandos apresentados a seguir:
+
+[NOTE]
+====
+Essa execução/resultado de comandos é feita num shell (Bash) de um {macOS}.
+Mas, ela também pode ser adaptada e realizada em outros sistemas operacionais.
+====
+
+----
+$ for n in 1 2; do curl -s -O https://shattered.it/static/shattered-$n.pdf; done
+$ open shattered-*.pdf
+$ diff shattered-*.pdf
+Binary files shattered-1.pdf and shattered-2.pdf differ
+$ shasum shattered-*.pdf
+38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-1.pdf
+38762cf7f55934b34d179ae6a4c80cadccbb7f0a  shattered-2.pdf
+----
+
+O código JavaScript da {uri-blockchain-demo-hash}[aba Hash] (`views/hash.jade`) é um código escrito em {uri-jade}[Jade].
+Ele calcula o hash através de um código (em JavaScript) que executa a função sha256.
+
+[source,javascript]
+.public/javascripts/lib/sha256.js
+----
+include::{srcdir}/public/javascripts/blockchain.js[lines=1..4]
+----
+
+Obviamente, a função hash implementada em JavaScript também deve produzir o mesmo resultado que uma função que pode ser chamada via linha de comando.
+Sendo assim, também é possível gerar o hash de uma string informada no quadro `Data` através de uma linha de comando (em Bash, por exemplo).
+
+O Hash para a string vazia (valor inicial do quadro), pode ser calculado assim:
+
+----
+echo -n ''|shasum -a 256
+----
+
+Então, o hash de "Paulo Jerônimo" poderia ser calculado assim:
+
+----
+echo -n 'Paulo Jerônimo'|shasum -a 256
+----
+
+Para se aprofundar um pouco mais em funções hash aplicadas a moedas digitais e saber quando colisões em valores de hash tem importância nesse contexto, recomenda-se a leitura do artigo {uri-history-of-hash-function-attacks}["Lessons From The History Of Attacks On Secure Hash Functions"].

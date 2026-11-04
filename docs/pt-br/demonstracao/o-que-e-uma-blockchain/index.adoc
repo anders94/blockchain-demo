@@ -1,0 +1,10 @@
+[[o-que-e-uma-blockchain]]
+= O que é uma Blockchain?
+
+:leveloffset: +1
+
+include::uma-visualizacao-grafica.adoc[]
+
+include::a-blockchain-e-distribuida-e-descentralizada.adoc[]
+
+:leveloffset: -1

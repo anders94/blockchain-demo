@@ -1,0 +1,37 @@
+[[introducao]]
+= Introdução
+
+Este projeto provê uma aplicação web, interativa, para demonstrar conceitos básicos e fundamentais de uma {blockchain} (ou, traduzindo ao pé da letra para o português, corrente de blocos).
+
+[NOTE]
+====
+O {uri-blockchain-demo-2-src}[código fonte deste projeto] (incluindo este documento) é aberto e está disponível.
+====
+
+ifdef::backend-html5[]
+[NOTE]
+====
+Você também pode {uri-blockchain-demo-2-docs-pt-br}/blockchain-demo.pdf[baixar e ler este documento em formato PDF].
+====
+endif::[]
+
+ifndef::backend-html5[]
+[NOTE]
+====
+Você pode visualizar uma versão online deste documento acessando o endereço {uri-blockchain-demo-2-docs-pt-br}.
+====
+endif::[]
+
+A demonstração de uso da aplicação deste projeto pode ser visualizada em duas (2) versões:
+
+. {uri-blockchain-101-demo}[Blockchain 101 - Demo]: Vídeo original (em inglês) (criado por {AndersBrownworth}).
+. {uri-blockchain-demo-2-playlist}[Blockchain: uma visualização gráfica]: Playlist com 10 vídeos, em português do Brasil, criados por {PauloJeronimo} para a organização {blockchain4devs}. `Plus`: {uri-blockchain-dfjug}[Blockchain]: hangout (apresentação), sobre esse assunto, com o {uri-dfjug}[DFJUG].
+
+Através dos vídeos acima é feita uma apresentação, visual, que consideramos ser bastante elucidante nos conceitos elementares de uma {blockchain}.
+A aplicação apresentada introduz o conceito de um {uri-livro-razao}[livro-razão] (distribuído).
+Ela está em execução, neste momento, no seguinte endereço:
+
+* {uri-anders-blockchain}
+
+Você também pode fazer o {uri-blockchain-demo-2-src}[download deste projeto] a partir do GitHub e fazer a execução dessa aplicação, localmente, em teu ambiente.
+Isso é explicado logo a seguir, no primeiro tópico desse documento.
